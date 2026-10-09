@@ -89,7 +89,19 @@ export default function Home() {
 
       <section id="projects" className="projects-section"><div className="section-shell section-intro"><div><p className="eyebrow">Selected work</p><h2>Built for what’s next.</h2></div><a className="text-link" href="/projects">View all projects <span>↗</span></a></div><div className="project-carousel section-shell"><a className="project-card" href={`https://mcdberl.com/projects/${currentProject[3]}/`}><div className="project-image"><Image src={`${A}${currentProject[2]}`} alt={currentProject[0]} fill sizes="(max-width: 700px) 100vw, 62vw" /></div><div className="project-meta"><div><h3>{currentProject[0]}</h3><p>{currentProject[1]}</p></div><span className="round-arrow">↗</span></div></a><div className="carousel-controls"><button aria-label="Previous project" onClick={() => setProjectIndex((projectIndex - 1 + projects.length) % projects.length)}>←</button><span>{String(projectIndex + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}</span><button aria-label="Next project" onClick={() => setProjectIndex((projectIndex + 1) % projects.length)}>→</button></div></div></section>
 
-      <section id="services" className="services section-shell"><p className="eyebrow">How we work</p><div className="service-list"><div><span>01</span><h3>Performance-led design</h3><p>We bring energy, water and human comfort into the earliest design conversations.</p></div><div><span>02</span><h3>Systems that endure</h3><p>Practical engineering strategies built for long-term performance, resilience and value.</p></div><div><span>03</span><h3>Measured impact</h3><p>We turn ambitions into measurable outcomes, from first sketch to operational reality.</p></div></div></section>
+      <section id="services" className="services section-shell">
+        <div className="services-heading">
+          <div className="services-heading-copy">
+            <p className="eyebrow">How we work</p>
+            <h2>Engineering systems that make better places.</h2>
+            <p>We connect technical precision with the larger life of a building, campus or city.</p>
+          </div>
+          <div className="services-image">
+            <Image src={`${A}services/engineering-systems.jpg`} alt="Abstract building services and engineering systems drawing" fill sizes="(max-width: 900px) 100vw, 48vw" />
+          </div>
+        </div>
+        <div className="service-list"><div><span>01</span><h3>Performance-led design</h3><p>We bring energy, water and human comfort into the earliest design conversations.</p></div><div><span>02</span><h3>Systems that endure</h3><p>Practical engineering strategies built for long-term performance, resilience and value.</p></div><div><span>03</span><h3>Measured impact</h3><p>We turn ambitions into measurable outcomes, from first sketch to operational reality.</p></div></div>
+      </section>
 
       <section className="testimonials section-shell"><div className="section-intro"><div><p className="eyebrow">Client voices</p><h2>Hear it straight<br />from our customers.</h2></div><div className="carousel-controls"><button aria-label="Previous testimonial" onClick={() => setTestimonialIndex((testimonialIndex - 1 + testimonials.length) % testimonials.length)}>←</button><span>{String(testimonialIndex + 1).padStart(2, "0")} / 07</span><button aria-label="Next testimonial" onClick={() => setTestimonialIndex((testimonialIndex + 1) % testimonials.length)}>→</button></div></div><blockquote>“{currentTestimonial[2]}”</blockquote><div className="quote-author"><strong>{currentTestimonial[0]}</strong><span>{currentTestimonial[1]}</span></div></section>
 
