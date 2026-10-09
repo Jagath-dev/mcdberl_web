@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../../components/site-chrome";
 import { WORLD_COUNTRIES } from "./world-map-data";
+import { AboutApproach, AboutOutcomes } from "../../components/about-sections";
 
 interface ProjectLocation {
   id: string;
@@ -161,81 +162,10 @@ export default function AboutClient() {
         </section>
 
         {/* Section 3: What can we do for you */}
-        <section className="about-outcomes-section page-shell">
-          <div className="about-section-header">
-            <p className="eyebrow">Measurable Outcomes</p>
-            <h2>What can we do for you</h2>
-            <p>
-              Delivering quantifiable, verified performance improvements that enhance long-term building viability while minimizing environmental footprint.
-            </p>
-          </div>
-
-          <div className="outcomes-grid-5">
-            {[
-              {
-                img: "/assets/about/what-we-can-do-1.png",
-                title: "Reduce Capex by 3% & Opex by 30-50%",
-                desc: "Integrated MEP rightsizing and lean infrastructure design that cuts both upfront budget and recurring utility expenditure."
-              },
-              {
-                img: "/assets/about/what-we-can-do-2.png",
-                title: "Achieve Energy Savings by 30-50%",
-                desc: "Advanced computational energy modeling, passive cooling, and high-COP mechanical systems that surpass ASHRAE benchmarks."
-              },
-              {
-                img: "/assets/about/what-we-can-do-3.png",
-                title: "Achieve Water Savings by 48%",
-                desc: "Closed-loop water balance systems, zero-liquid discharge engineering, and innovative rainwater catchment networks."
-              },
-              {
-                img: "/assets/about/what-we-can-do-4.png",
-                title: "Carbon Emission Savings by 35%",
-                desc: "Lifecycle carbon assessments targeting embodied construction emissions and low-carbon operational footprints."
-              },
-              {
-                img: "/assets/about/what-we-can-do-5.png",
-                title: "Achieve Net-Positive Energy, Net-Positive Water and Carbon Neutral Buildings",
-                desc: "Transforming real estate assets into self-sufficient, regenerative ecosystems that generate surplus energy and clean water."
-              }
-            ].map((outcome, idx) => (
-              <div key={idx} className="outcome-card">
-                <div className="outcome-icon-wrap">
-                  <Image
-                    src={outcome.img}
-                    alt={outcome.title}
-                    width={90}
-                    height={90}
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <h3>{outcome.title}</h3>
-                <p>{outcome.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <AboutOutcomes />
 
         {/* Section 4: Our Approach */}
-        <section className="about-approach-section page-shell">
-          <div className="about-section-header">
-            <p className="eyebrow">Methodology</p>
-            <h2>Our Approach</h2>
-            <p>
-              Our holistic engineering methodology unites physics-driven building simulation, integrated MEP engineering, and post-occupancy performance monitoring into an unbroken continuum.
-            </p>
-          </div>
-
-          <div className="approach-image-card">
-            <Image
-              src="/assets/about/our-approach.png"
-              alt="McD BERL Our Approach - Finalized Lifecycle Diagram"
-              width={1800}
-              height={900}
-              priority
-              style={{ width: "100%", height: "auto" }}
-            />
-          </div>
-        </section>
+        <AboutApproach />
 
         {/* Section 5: Our Global Footprint */}
         <section className="about-footprint-section page-shell">

@@ -97,8 +97,18 @@ export default function HomeProjects() {
             ))}
           </Link>
 
+          <div className="home-work-progress" aria-hidden="true">
+            <span style={{ width: `${((index + 1) / total) * 100}%` }} />
+          </div>
+
           <div className="home-work-panel" aria-live="polite">
-            <div className="home-work-top">
+            <div className="home-work-info">
+              <p className="home-work-category">{project.category}</p>
+              <h3>{project.title}</h3>
+              <p className="home-work-location">{project.location}</p>
+            </div>
+            <p className="home-work-summary">{project.summary}</p>
+            <div className="home-work-nav">
               <span className="home-work-count">
                 <strong>{String(index + 1).padStart(2, "0")}</strong> / {String(total).padStart(2, "0")}
               </span>
@@ -106,22 +116,8 @@ export default function HomeProjects() {
                 <button type="button" aria-label="Previous project" onClick={() => go(index - 1)}>←</button>
                 <button type="button" aria-label="Next project" onClick={() => go(index + 1)}>→</button>
               </div>
+              <Link className="round-arrow home-work-go" href={`/projects/${project.slug}/`} aria-label={`View project: ${project.title}`}>↗</Link>
             </div>
-            <div className="home-work-progress" aria-hidden="true">
-              <span style={{ width: `${((index + 1) / total) * 100}%` }} />
-            </div>
-            <p className="home-work-category">{project.category}</p>
-            <h3>{project.title}</h3>
-            <p className="home-work-location">{project.location}</p>
-            <p className="home-work-summary">{project.summary}</p>
-            <ul className="home-work-focus">
-              {project.focus.slice(0, 3).map((f) => (
-                <li key={f}>{f}</li>
-              ))}
-            </ul>
-            <Link className="home-work-cta" href={`/projects/${project.slug}/`}>
-              View project <span aria-hidden="true">↗</span>
-            </Link>
           </div>
         </div>
 
