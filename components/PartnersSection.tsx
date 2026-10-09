@@ -330,67 +330,63 @@ export default function PartnersSection() {
           </AnimatePresence>
         </motion.div>
       ) : (
-        /* Motion Stream / Infinite Marquee */
+        /* Sector Rails: one scrolling rail per category */
         <motion.div
           key="stream-view"
-          className="partner-stream-wrapper"
+          className="partner-rails"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
         >
-          {/* Row 1: Leftward Marquee */}
-          <div className="partner-marquee-track">
-            <motion.div
-              className="partner-marquee-content"
-              animate={{ x: ["0%", "-50%"] }}
-              transition={{ repeat: Infinity, ease: "linear", duration: 28 }}
-            >
-              {[...PARTNERS, ...PARTNERS].map((partner, idx) => (
-                <div
-                  key={`r1-${partner.id}-${idx}`}
-                  className="stream-partner-pill"
-                  onClick={() => setSelectedPartner(partner)}
-                  role="button"
-                  tabIndex={0}
-                >
-                  <div className="stream-logo-mini">
-                    <Image src={partner.logo} alt={partner.name} width={40} height={40} />
-                  </div>
-                  <div>
-                    <span className="stream-name">{partner.name}</span>
-                    <span className="stream-category">{partner.sector}</span>
+          {CATEGORIES.filter((c) => c !== "All").map((cat, railIndex) => {
+            const railPartners = PARTNERS.filter((p) => p.category === cat);
+            // Repeat short lists so the loop fills the rail, then double for a seamless -50% scroll
+            const repeats = Math.max(2, Math.ceil(10 / railPartners.length));
+            const loop: Partner[] = [];
+            for (let i = 0; i < repeats; i++) loop.push(...railPartners);
+            const items = [...loop, ...loop];
+            return (
+              <div className="partner-rail" key={cat}>
+                <div className="partner-rail-label">
+                  <span className="partner-rail-num">{String(railIndex + 1).padStart(2, "0")}</span>
+                  <h3>{cat}</h3>
+                  <span className="partner-rail-count">
+                    {railPartners.length} partner{railPartners.length !== 1 ? "s" : ""}
+                  </span>
+                </div>
+                <div className="partner-rail-window">
+                  <div
+                    className={`partner-rail-track${railIndex % 2 === 1 ? " is-reverse" : ""}`}
+                    style={{ animationDuration: `${Math.max(36, items.length * 2.6)}s` }}
+                  >
+                    {items.map((partner, idx) => {
+                      const isClone = idx >= railPartners.length;
+                      return (
+                        <button
+                          type="button"
+                          key={`${cat}-${partner.id}-${idx}`}
+                          className="partner-rail-tile"
+                          onClick={() => setSelectedPartner(partner)}
+                          tabIndex={isClone ? -1 : 0}
+                          aria-hidden={isClone ? true : undefined}
+                          aria-label={`View details for ${partner.name}`}
+                        >
+                          <span className="partner-rail-logo">
+                            <Image src={partner.logo} alt="" width={96} height={48} />
+                          </span>
+                          <span className="partner-rail-text">
+                            <span className="partner-rail-name">{partner.name}</span>
+                            <span className="partner-rail-sector">{partner.sector}</span>
+                          </span>
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
-              ))}
-            </motion.div>
-          </div>
-
-          {/* Row 2: Rightward Marquee */}
-          <div className="partner-marquee-track reverse">
-            <motion.div
-              className="partner-marquee-content reverse"
-              animate={{ x: ["-50%", "0%"] }}
-              transition={{ repeat: Infinity, ease: "linear", duration: 32 }}
-            >
-              {[...PARTNERS.slice().reverse(), ...PARTNERS.slice().reverse()].map((partner, idx) => (
-                <div
-                  key={`r2-${partner.id}-${idx}`}
-                  className="stream-partner-pill"
-                  onClick={() => setSelectedPartner(partner)}
-                  role="button"
-                  tabIndex={0}
-                >
-                  <div className="stream-logo-mini">
-                    <Image src={partner.logo} alt={partner.name} width={40} height={40} />
-                  </div>
-                  <div>
-                    <span className="stream-name">{partner.name}</span>
-                    <span className="stream-category">{partner.sector}</span>
-                  </div>
-                </div>
-              ))}
-            </motion.div>
-          </div>
+              </div>
+            );
+          })}
+          <p className="partner-rails-hint">Hover a rail to pause · select a partner for details</p>
         </motion.div>
       )}
 

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { SiteFooter, SiteHeader } from "../components/site-chrome";
 import PartnersSection from "../components/PartnersSection";
+import HomeProjects from "../components/HomeProjects";
 
 const A = "/assets/";
 
@@ -33,9 +34,7 @@ const testimonials = [
 ] as const;
 
 export default function Home() {
-  const [projectIndex, setProjectIndex] = useState(0);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
-  const currentProject = projects[projectIndex];
   const currentTestimonial = testimonials[testimonialIndex];
 
 
@@ -87,7 +86,7 @@ export default function Home() {
 
       <section id="sectors" className="statement section-shell"><p className="eyebrow">Our point of view</p><div className="statement-grid"><h2>Design, sustainability<br />and shared vision.</h2><p>Every project is a chance to leave the world better than we found it. From high-performance buildings to resilient campuses, our work brings together systems thinking, rigorous engineering and a deep respect for the places we shape.</p></div></section>
 
-      <section id="projects" className="projects-section"><div className="section-shell section-intro"><div><p className="eyebrow">Selected work</p><h2>Built for what’s next.</h2></div><a className="text-link" href="/projects">View all projects <span>↗</span></a></div><div className="project-carousel section-shell"><a className="project-card" href={`https://mcdberl.com/projects/${currentProject[3]}/`}><div className="project-image"><Image src={`${A}${currentProject[2]}`} alt={currentProject[0]} fill sizes="(max-width: 700px) 100vw, 62vw" /></div><div className="project-meta"><div><h3>{currentProject[0]}</h3><p>{currentProject[1]}</p></div><span className="round-arrow">↗</span></div></a><div className="carousel-controls"><button aria-label="Previous project" onClick={() => setProjectIndex((projectIndex - 1 + projects.length) % projects.length)}>←</button><span>{String(projectIndex + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}</span><button aria-label="Next project" onClick={() => setProjectIndex((projectIndex + 1) % projects.length)}>→</button></div></div></section>
+      <HomeProjects />
 
       <section id="services" className="services section-shell">
         <div className="services-heading">
@@ -105,7 +104,7 @@ export default function Home() {
 
       <section className="testimonials section-shell"><div className="section-intro"><div><p className="eyebrow">Client voices</p><h2>Hear it straight<br />from our customers.</h2></div><div className="carousel-controls"><button aria-label="Previous testimonial" onClick={() => setTestimonialIndex((testimonialIndex - 1 + testimonials.length) % testimonials.length)}>←</button><span>{String(testimonialIndex + 1).padStart(2, "0")} / 07</span><button aria-label="Next testimonial" onClick={() => setTestimonialIndex((testimonialIndex + 1) % testimonials.length)}>→</button></div></div><blockquote>“{currentTestimonial[2]}”</blockquote><div className="quote-author"><strong>{currentTestimonial[0]}</strong><span>{currentTestimonial[1]}</span></div></section>
 
-      <section id="careers" className="careers"><Image src={`${A}team/team-net-zero.jpg`} alt="McD BERL team working toward net-zero goals" fill sizes="100vw" /><div className="career-shade" /><div className="career-copy"><p>I've transformed challenges into the success of achieving net-zero goals.</p><a className="text-link light" href="/careers">Find your opportunity <span>→</span></a></div></section>
+      {/* <section id="careers" className="careers"><Image src={`${A}team/team-net-zero.jpg`} alt="McD BERL team working toward net-zero goals" fill sizes="100vw" /><div className="career-shade" /><div className="career-copy"><p>I've transformed challenges into the success of achieving net-zero goals.</p><a className="text-link light" href="/careers">Find your opportunity <span>→</span></a></div></section> */}
 
       <PartnersSection />
 
