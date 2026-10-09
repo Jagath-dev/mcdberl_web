@@ -310,7 +310,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Transform your hotel into a net zero carbon space with energy efficiency, renewables, and smart upgrades for",
     "link": "https://mcdberl.com/transforming-existing-hotel-to-net-zero-carbon/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/03/Transforming-Existing-Hotel-to-Net-Zero-Carbon-featured-image.png?fit=1080%2C1350&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/03/Transforming-Existing-Hotel-to-Net-Zero-Carbon-featured-image.png?fit=1080%2C1350&ssl=1"
+    "localImage": "/assets/publications/transforming-existing-hotel-to-net-zero-carbon.png",
+    "displayImage": "/assets/publications/transforming-existing-hotel-to-net-zero-carbon.png"
   },
   {
     "id": "pub-27",
@@ -321,7 +322,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Discover key strategies to future-proof buildings with flexibility, smart tech, and sustainability for lasting value and resilience.",
     "link": "https://mcdberl.com/designing-for-change-how-developers-can-ensure-building-longevity/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/02/sketch1740634027705.png?fit=1080%2C1350&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/02/sketch1740634027705.png?fit=1080%2C1350&ssl=1"
+    "localImage": "/assets/publications/designing-for-change-how-developers-can-ensure-building-longevity.png",
+    "displayImage": "/assets/publications/designing-for-change-how-developers-can-ensure-building-longevity.png"
   },
   {
     "id": "pub-28",
@@ -332,7 +334,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Cities can combat rising temperatures by using green spaces, cool materials, water bodies, and sustainable urban planning",
     "link": "https://mcdberl.com/urban-cooling-and-climate-adaptation-how-cities-can-prepare-for-rising-temperatures/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/02/Urban-Cooling-and-Climate-Adaptation.png?fit=1080%2C1350&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/02/Urban-Cooling-and-Climate-Adaptation.png?fit=1080%2C1350&ssl=1"
+    "localImage": "/assets/publications/urban-cooling-and-climate-adaptation-how-cities-can-prepare-for-rising-temperatures.png",
+    "displayImage": "/assets/publications/urban-cooling-and-climate-adaptation-how-cities-can-prepare-for-rising-temperatures.png"
   },
   {
     "id": "pub-29",
@@ -343,7 +346,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Transition to ISO 14068-1 in 2025 for credible carbon neutrality. Ensure real emissions reductions, transparency, and compliance",
     "link": "https://mcdberl.com/iso-14068-1-transitioning-to-the-new-carbon-neutrality-standard-in-2025/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/02/Transitioning-to-the-New-Carbon-Neutrality-Standard-in-2025.png?fit=1080%2C1350&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/02/Transitioning-to-the-New-Carbon-Neutrality-Standard-in-2025.png?fit=1080%2C1350&ssl=1"
+    "localImage": "/assets/publications/iso-14068-1-transitioning-to-the-new-carbon-neutrality-standard-in-2025.png",
+    "displayImage": "/assets/publications/iso-14068-1-transitioning-to-the-new-carbon-neutrality-standard-in-2025.png"
   },
   {
     "id": "pub-30",
@@ -354,7 +358,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Learn how HVAC design enhances energy efficiency, indoor air quality, and comfort to achieve top green building",
     "link": "https://mcdberl.com/the-role-of-hvac-design-in-achieving-green-certifications/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/02/The-Role-of-HVAC-Designs-in-Achieving-Green-Certifications.png?fit=1080%2C1350&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/02/The-Role-of-HVAC-Designs-in-Achieving-Green-Certifications.png?fit=1080%2C1350&ssl=1"
+    "localImage": "/assets/publications/the-role-of-hvac-design-in-achieving-green-certifications.png",
+    "displayImage": "/assets/publications/the-role-of-hvac-design-in-achieving-green-certifications.png"
   },
   {
     "id": "pub-31",
@@ -365,7 +370,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Discover how copper powers the energy transition, driving renewable energy, EVs, and smart grids for a greener",
     "link": "https://mcdberl.com/copper-in-the-energy-transition-a-conductor-for-a-greener-future/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/02/Copper-in-the-Energy-Transitions-A-Conductor-for-a-Greener-Future.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/02/Copper-in-the-Energy-Transitions-A-Conductor-for-a-Greener-Future.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/copper-in-the-energy-transition-a-conductor-for-a-greener-future.png",
+    "displayImage": "/assets/publications/copper-in-the-energy-transition-a-conductor-for-a-greener-future.png"
   },
   {
     "id": "pub-32",
@@ -376,7 +382,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Ceiling Fan Integrated Air Conditioning (CFIAC) systems are advanced hybrid solutions that combine the mechanical airflow distribution",
     "link": "https://mcdberl.com/energy-efficient-cooling-how-ceiling-fan-integration-is-transforming-air-conditioning/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/02/Energy-Efficient-Cooling-Ceiling-Fan-Integration-in-AC.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/02/Energy-Efficient-Cooling-Ceiling-Fan-Integration-in-AC.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/energy-efficient-cooling-how-ceiling-fan-integration-is-transforming-air-conditioning.png",
+    "displayImage": "/assets/publications/energy-efficient-cooling-how-ceiling-fan-integration-is-transforming-air-conditioning.png"
   },
   {
     "id": "pub-33",
@@ -387,7 +394,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "The Antecedent Moisture Condition (AMC) of soil is a useful concept in water management, farming, and environmental",
     "link": "https://mcdberl.com/antecedent-moisture-condition-amc-of-soil/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/02/Antecedent-Moisture-Condition-AMC-of-Soil-featured-image.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/02/Antecedent-Moisture-Condition-AMC-of-Soil-featured-image.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/antecedent-moisture-condition-amc-of-soil.png",
+    "displayImage": "/assets/publications/antecedent-moisture-condition-amc-of-soil.png"
   },
   {
     "id": "pub-34",
@@ -398,7 +406,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Building Information Modeling (BIM) has emerged as a game-changer for Mechanical, Electrical, and Plumbing (MEP) design in",
     "link": "https://mcdberl.com/bim-for-mep-design-in-buildings-revolutionizing-the-industry/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/02/BIM-for-MEP-Design-in-Buildings-Revolutionizing-the-Industry.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/02/BIM-for-MEP-Design-in-Buildings-Revolutionizing-the-Industry.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/bim-for-mep-design-in-buildings-revolutionizing-the-industry.png",
+    "displayImage": "/assets/publications/bim-for-mep-design-in-buildings-revolutionizing-the-industry.png"
   },
   {
     "id": "pub-35",
@@ -409,7 +418,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "As climate challenges intensify, the focus on creating resilient buildings has gained significant momentum. However, even the",
     "link": "https://mcdberl.com/resilient-buildings-require-resilient-cities-a-symbiotic-relationship/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/01/Resilient-Building-Require-Resilient-Cities-A-Symbiotic-Relationship.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/01/Resilient-Building-Require-Resilient-Cities-A-Symbiotic-Relationship.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/resilient-buildings-require-resilient-cities-a-symbiotic-relationship.png",
+    "displayImage": "/assets/publications/resilient-buildings-require-resilient-cities-a-symbiotic-relationship.png"
   },
   {
     "id": "pub-36",
@@ -420,7 +430,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Mechanical, Electrical, and Plumbing (MEP) systems are the lifeblood of any building, ensuring comfort, functionality, and efficiency.",
     "link": "https://mcdberl.com/solutions-to-overcome-mep-planning-challenges/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/01/Solutions-to-Overcome-MEP-Planning-Challenges-featured-image.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/01/Solutions-to-Overcome-MEP-Planning-Challenges-featured-image.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/solutions-to-overcome-mep-planning-challenges.png",
+    "displayImage": "/assets/publications/solutions-to-overcome-mep-planning-challenges.png"
   },
   {
     "id": "pub-37",
@@ -431,7 +442,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Decentralized energy systems that can operate autonomously or in coordination with the main grid, serves a discrete",
     "link": "https://mcdberl.com/the-rise-of-microgrids-in-buildings-enhancing-resilience-and-reducing-cost/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/01/The-Rise-of-Microgrids-in-building-Enhancing-Resilience-and-Reducing-Cost.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/01/The-Rise-of-Microgrids-in-building-Enhancing-Resilience-and-Reducing-Cost.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/the-rise-of-microgrids-in-buildings-enhancing-resilience-and-reducing-cost.png",
+    "displayImage": "/assets/publications/the-rise-of-microgrids-in-buildings-enhancing-resilience-and-reducing-cost.png"
   },
   {
     "id": "pub-38",
@@ -442,7 +454,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "The global energy landscape is undergoing a seismic shift. With the rise of renewable energy sources like",
     "link": "https://mcdberl.com/the-renewable-revolution-is-our-grid-ready-for-100-electrification/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/01/The-Renewable-Revolution-Is-Our-Grid-Ready-for-100-Electrification.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/01/The-Renewable-Revolution-Is-Our-Grid-Ready-for-100-Electrification.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/the-renewable-revolution-is-our-grid-ready-for-100-electrification.png",
+    "displayImage": "/assets/publications/the-renewable-revolution-is-our-grid-ready-for-100-electrification.png"
   },
   {
     "id": "pub-39",
@@ -453,7 +466,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "A sump pump is an essential tool in basement flood prevention, as it actively collects and redirects",
     "link": "https://mcdberl.com/how-a-sump-pump-helps-prevent-flooding/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/01/How-a-Sump-Pump-Helps-Prevent-Flooding.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/01/How-a-Sump-Pump-Helps-Prevent-Flooding.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/how-a-sump-pump-helps-prevent-flooding.png",
+    "displayImage": "/assets/publications/how-a-sump-pump-helps-prevent-flooding.png"
   },
   {
     "id": "pub-40",
@@ -464,7 +478,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Flooding, intensified by climate change, rising sea levels, and extreme weather, is a major global threat to",
     "link": "https://mcdberl.com/world-under-water-what-deadly-and-costly-flooding-means-for-the-future/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/01/World-Under-Water-What-Deadly-and-Costly-Flooding-Means-for-the-Future.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/01/World-Under-Water-What-Deadly-and-Costly-Flooding-Means-for-the-Future.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/world-under-water-what-deadly-and-costly-flooding-means-for-the-future.png",
+    "displayImage": "/assets/publications/world-under-water-what-deadly-and-costly-flooding-means-for-the-future.png"
   },
   {
     "id": "pub-41",
@@ -475,7 +490,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "As sustainability becomes a cornerstone of modern architecture, building energy simulations are pivotal in shaping designs that",
     "link": "https://mcdberl.com/mastering-building-energy-simulations-the-ultimate-5-point-checklist/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/01/Mastering-Building-Energy-Simulations-The-Ultimate-5-Point-Checklist.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/01/Mastering-Building-Energy-Simulations-The-Ultimate-5-Point-Checklist.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/mastering-building-energy-simulations-the-ultimate-5-point-checklist.png",
+    "displayImage": "/assets/publications/mastering-building-energy-simulations-the-ultimate-5-point-checklist.png"
   },
   {
     "id": "pub-42",
@@ -486,7 +502,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Cooling towers are essential components of many industrial and commercial HVAC systems, designed to remove heat from",
     "link": "https://mcdberl.com/why-you-should-invest-in-cooling-tower-preventative-maintenance/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/01/Why-You-Should-Invest-in-Cooling-Tower-Preventative-Maintenance-featured-image.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2025/01/Why-You-Should-Invest-in-Cooling-Tower-Preventative-Maintenance-featured-image.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/why-you-should-invest-in-cooling-tower-preventative-maintenance.png",
+    "displayImage": "/assets/publications/why-you-should-invest-in-cooling-tower-preventative-maintenance.png"
   },
   {
     "id": "pub-43",
@@ -497,7 +514,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Discover how smart meters, under India\u2019s Revamped Distribution Sector Scheme, enhance power sector efficiency by reducing billing",
     "link": "https://mcdberl.com/smart-meters-powering-indias-energy-transformation/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/Smart-Meters-Powering-Indias-Energy-Transformation-featured-Image.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/Smart-Meters-Powering-Indias-Energy-Transformation-featured-Image.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/smart-meters-powering-indias-energy-transformation.png",
+    "displayImage": "/assets/publications/smart-meters-powering-indias-energy-transformation.png"
   },
   {
     "id": "pub-44",
@@ -508,7 +526,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Learn how regular pump maintenance saves energy, reduces costs, and ensures efficiency across industries like HVAC, water",
     "link": "https://mcdberl.com/maintenance-matters-how-regular-pump-servicing-saves-energy-and-reduces-costs/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/How-Regular-Pump-Servicing-Saves-Energy-and-Reduces-Costs.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/How-Regular-Pump-Servicing-Saves-Energy-and-Reduces-Costs.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/maintenance-matters-how-regular-pump-servicing-saves-energy-and-reduces-costs.png",
+    "displayImage": "/assets/publications/maintenance-matters-how-regular-pump-servicing-saves-energy-and-reduces-costs.png"
   },
   {
     "id": "pub-45",
@@ -519,7 +538,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Building resilience is crucial in addressing the immediate and escalating impacts of climate change, including rising temperatures,",
     "link": "https://mcdberl.com/integrating-climate-adaptation-into-watershed-management-building-resilience-in-a-changing-climate/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/Integrating-Climate-Adaptation-image.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/Integrating-Climate-Adaptation-image.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/integrating-climate-adaptation-into-watershed-management-building-resilience-in-a-changing-climate.png",
+    "displayImage": "/assets/publications/integrating-climate-adaptation-into-watershed-management-building-resilience-in-a-changing-climate.png"
   },
   {
     "id": "pub-46",
@@ -530,7 +550,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Simulation technologies enable efficient retrofitting of older buildings, enhancing energy efficiency, reducing emissions, and supporting sustainable upgrades",
     "link": "https://mcdberl.com/the-role-of-simulation-in-retrofitting-and-renovating-older-buildings/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/The-Role-of-Simulation-in-Retrofitting-and-Renovating-Older-Buildings-featured-image.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/The-Role-of-Simulation-in-Retrofitting-and-Renovating-Older-Buildings-featured-image.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/the-role-of-simulation-in-retrofitting-and-renovating-older-buildings.png",
+    "displayImage": "/assets/publications/the-role-of-simulation-in-retrofitting-and-renovating-older-buildings.png"
   },
   {
     "id": "pub-47",
@@ -541,7 +562,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Smart pumps play a critical role in enhancing energy efficiency and sustainability in commercial building design. These",
     "link": "https://mcdberl.com/smart-pumps-for-energy-efficienct-commercial-building-design/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/shared-image-8.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/shared-image-8.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/smart-pumps-for-energy-efficienct-commercial-building-design.png",
+    "displayImage": "/assets/publications/smart-pumps-for-energy-efficienct-commercial-building-design.png"
   },
   {
     "id": "pub-48",
@@ -552,7 +574,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "In a world grappling with climate change, resource depletion, and urban sprawl, the built environment plays a",
     "link": "https://mcdberl.com/architecture-as-activism-repairing-the-planet-through-building-design/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/shared-image-7.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/shared-image-7.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/architecture-as-activism-repairing-the-planet-through-building-design.png",
+    "displayImage": "/assets/publications/architecture-as-activism-repairing-the-planet-through-building-design.png"
   },
   {
     "id": "pub-49",
@@ -563,7 +586,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "As cities grow, traditional drainage systems struggle. Innovative trends and technologies are transforming urban drainage for more",
     "link": "https://mcdberl.com/future-trends-in-urban-drainage-systems-for-high-density-cities/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/shared-image-6.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/shared-image-6.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/future-trends-in-urban-drainage-systems-for-high-density-cities.png",
+    "displayImage": "/assets/publications/future-trends-in-urban-drainage-systems-for-high-density-cities.png"
   },
   {
     "id": "pub-50",
@@ -574,7 +598,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "The real estate market is facing a looming challenge: the rise of climate-related risks is making properties",
     "link": "https://mcdberl.com/climate-change-insurance-and-builders-preparing-for-an-uninsurable-real-estate-market/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/Climate-Change-Insurance-and-Builders-Preparing-for-an-Uninsurable-Real-Estate-Market-featured-image.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/Climate-Change-Insurance-and-Builders-Preparing-for-an-Uninsurable-Real-Estate-Market-featured-image.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/climate-change-insurance-and-builders-preparing-for-an-uninsurable-real-estate-market.png",
+    "displayImage": "/assets/publications/climate-change-insurance-and-builders-preparing-for-an-uninsurable-real-estate-market.png"
   },
   {
     "id": "pub-51",
@@ -585,7 +610,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "AI is set to transform building design, empowering consultants and designers with new possibilities for innovation and",
     "link": "https://mcdberl.com/how-artificial-intelligence-is-transforming-architecture-and-consulting/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/Artificial-Intelligence-in-Transforming-Architecture-and-Consulting.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/Artificial-Intelligence-in-Transforming-Architecture-and-Consulting.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/how-artificial-intelligence-is-transforming-architecture-and-consulting.png",
+    "displayImage": "/assets/publications/how-artificial-intelligence-is-transforming-architecture-and-consulting.png"
   },
   {
     "id": "pub-52",
@@ -596,7 +622,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Waiting for hot water is a familiar frustration especially when you are in rush. When you are",
     "link": "https://mcdberl.com/how-to-avoid-waiting-for-hotwater/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/How-to-avoid-waiting-for-Hotwater.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/12/How-to-avoid-waiting-for-Hotwater.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/how-to-avoid-waiting-for-hotwater.png",
+    "displayImage": "/assets/publications/how-to-avoid-waiting-for-hotwater.png"
   },
   {
     "id": "pub-53",
@@ -607,7 +634,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "The term \u201cthermal mass\u201d describes a material\u2019s capacity to absorb, store, and release heat. Since it is",
     "link": "https://mcdberl.com/understanding-thermal-mass-the-key-to-energy-efficiency/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/11/Thermal-mass.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/11/Thermal-mass.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/understanding-thermal-mass-the-key-to-energy-efficiency.png",
+    "displayImage": "/assets/publications/understanding-thermal-mass-the-key-to-energy-efficiency.png"
   },
   {
     "id": "pub-54",
@@ -618,7 +646,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Designing climate resilience water and sewage treatment systems is crucial for ensuring they can withstand and recover",
     "link": "https://mcdberl.com/climate-resilience-water-and-wastewater-treatment-system/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/11/Resilient-STP.jpg?fit=800%2C800&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/11/Resilient-STP.jpg?fit=800%2C800&ssl=1"
+    "localImage": "/assets/publications/climate-resilience-water-and-wastewater-treatment-system.jpg",
+    "displayImage": "/assets/publications/climate-resilience-water-and-wastewater-treatment-system.jpg"
   },
   {
     "id": "pub-55",
@@ -629,7 +658,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "The Carbon Border Adjustment Mechanism (CBAM) is a regulatory framework proposed by the EU to impose a",
     "link": "https://mcdberl.com/decoding-the-eus-cbam-navigating-the-carbon-levys-impact-on-indias-exports-and-green-transition/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/11/shared-image-1-1.jpg?fit=800%2C800&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/11/shared-image-1-1.jpg?fit=800%2C800&ssl=1"
+    "localImage": "/assets/publications/decoding-the-eus-cbam-navigating-the-carbon-levys-impact-on-indias-exports-and-green-transition.jpg",
+    "displayImage": "/assets/publications/decoding-the-eus-cbam-navigating-the-carbon-levys-impact-on-indias-exports-and-green-transition.jpg"
   },
   {
     "id": "pub-56",
@@ -640,7 +670,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "In the realm of electrical systems, one crucial but often overlooked component is the earthing system. This",
     "link": "https://mcdberl.com/undersized-earthing-systemsensuring-electrical-safety/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/11/shared-image-4.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/11/shared-image-4.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/undersized-earthing-systemsensuring-electrical-safety.png",
+    "displayImage": "/assets/publications/undersized-earthing-systemsensuring-electrical-safety.png"
   },
   {
     "id": "pub-57",
@@ -651,7 +682,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "The worldwide transition to cleaner, renewable energy sources is essential for addressing climate change and diminishing dependence",
     "link": "https://mcdberl.com/busting-myths-about-renewable-energy-and-the-future-of-power/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/11/Busting-Myths-About-Renewable-Energy-and-the-Future-of-Power%E2%80%AF-featured-image.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/11/Busting-Myths-About-Renewable-Energy-and-the-Future-of-Power%E2%80%AF-featured-image.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/busting-myths-about-renewable-energy-and-the-future-of-power.webp",
+    "displayImage": "/assets/publications/busting-myths-about-renewable-energy-and-the-future-of-power.webp"
   },
   {
     "id": "pub-58",
@@ -662,7 +694,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "This year\u2019s COP29 in Baku, Azerbaijan, is poised to shift global climate action into high gear by",
     "link": "https://mcdberl.com/cop29-financing-the-future-the-new-collective-quantified-goal-for-climate-action/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/11/COP29-Financing-the-Future-The-New-Collective-Quantified-Goal-for-Climate-Action.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/11/COP29-Financing-the-Future-The-New-Collective-Quantified-Goal-for-Climate-Action.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/cop29-financing-the-future-the-new-collective-quantified-goal-for-climate-action.webp",
+    "displayImage": "/assets/publications/cop29-financing-the-future-the-new-collective-quantified-goal-for-climate-action.webp"
   },
   {
     "id": "pub-59",
@@ -673,7 +706,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "In recent years, the integration of Environmental, Social, and Governance (ESG) principles into business strategies has gained",
     "link": "https://mcdberl.com/understanding-the-national-guidelines-on-responsible-business-conduct-ngrbc-in-the-context-of-environmental-social-and-governance-esg/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/11/shared-image-3.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/11/shared-image-3.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/understanding-the-national-guidelines-on-responsible-business-conduct-ngrbc-in-the-context-of-environmental-social-and-governance-esg.png",
+    "displayImage": "/assets/publications/understanding-the-national-guidelines-on-responsible-business-conduct-ngrbc-in-the-context-of-environmental-social-and-governance-esg.png"
   },
   {
     "id": "pub-60",
@@ -684,7 +718,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Water conservation is a vital, yet often underappreciated, component of achieving decarbonization. By reducing the energy required",
     "link": "https://mcdberl.com/why-water-conservation-is-critical-to-achieving-decarbonization/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/10/Water-and-Decarbonization-1.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/10/Water-and-Decarbonization-1.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/why-water-conservation-is-critical-to-achieving-decarbonization.png",
+    "displayImage": "/assets/publications/why-water-conservation-is-critical-to-achieving-decarbonization.png"
   },
   {
     "id": "pub-61",
@@ -695,7 +730,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Enhancing Resiliency and Resource Recovery: Transforming Wastewater into Water and Energy In the face of growing environmental",
     "link": "https://mcdberl.com/enhancing-resiliency-and-resource-recovery-transforming-wastewater-into-water-and-energy/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/10/Enhancing-Resiliency-and-Resource-Recovery-Transforming-Wastewater-into-Water-and-Energy.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/10/Enhancing-Resiliency-and-Resource-Recovery-Transforming-Wastewater-into-Water-and-Energy.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/enhancing-resiliency-and-resource-recovery-transforming-wastewater-into-water-and-energy.webp",
+    "displayImage": "/assets/publications/enhancing-resiliency-and-resource-recovery-transforming-wastewater-into-water-and-energy.webp"
   },
   {
     "id": "pub-62",
@@ -706,7 +742,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "As the global community grapples with the urgent need to address climate change, businesses are increasingly seeking",
     "link": "https://mcdberl.com/why-internal-carbon-pricing-is-essential-for-achieving-net-zero-emissions/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/10/Why-Internal-Carbon-Pricing-is-Essential-for-Achieving-Net-Zero-Emissions-featured-image.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/10/Why-Internal-Carbon-Pricing-is-Essential-for-Achieving-Net-Zero-Emissions-featured-image.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/why-internal-carbon-pricing-is-essential-for-achieving-net-zero-emissions.webp",
+    "displayImage": "/assets/publications/why-internal-carbon-pricing-is-essential-for-achieving-net-zero-emissions.webp"
   },
   {
     "id": "pub-63",
@@ -717,7 +754,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "In the realm of urban development, digital twins are emerging as a game-changing technology that promises to",
     "link": "https://mcdberl.com/enhancing-urban-resilience-with-digital-twins-a-new-era-of-public-safety/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/10/Enhancing-Urban-Resilience-with-Digital-Twins-A-New-Era-of-Public-Safety-featured-image-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/10/Enhancing-Urban-Resilience-with-Digital-Twins-A-New-Era-of-Public-Safety-featured-image-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/enhancing-urban-resilience-with-digital-twins-a-new-era-of-public-safety.webp",
+    "displayImage": "/assets/publications/enhancing-urban-resilience-with-digital-twins-a-new-era-of-public-safety.webp"
   },
   {
     "id": "pub-64",
@@ -728,7 +766,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "The progress of green building ratings in India has been significant, driven by growing awareness of sustainability",
     "link": "https://mcdberl.com/from-vision-to-reality-indias-green-rating-systems-in-action/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/10/From-Vision-to-Reality-Indias-Green-Rating-Systems-in-Action-featured-image-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/10/From-Vision-to-Reality-Indias-Green-Rating-Systems-in-Action-featured-image-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/from-vision-to-reality-indias-green-rating-systems-in-action.webp",
+    "displayImage": "/assets/publications/from-vision-to-reality-indias-green-rating-systems-in-action.webp"
   },
   {
     "id": "pub-65",
@@ -739,7 +778,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Our cities, with their towering skyscrapers and sprawling infrastructure, stand as marvels of modern engineering and architecture.",
     "link": "https://mcdberl.com/turning-down-the-heat-using-green-roofs/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/10/Turning-Down-the-Heat-using-Green-Roofs-Featured-image.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/10/Turning-Down-the-Heat-using-Green-Roofs-Featured-image.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/turning-down-the-heat-using-green-roofs.png",
+    "displayImage": "/assets/publications/turning-down-the-heat-using-green-roofs.png"
   },
   {
     "id": "pub-66",
@@ -750,7 +790,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "In recent years, Bangalore, like many cities worldwide, has been grappling with a water crisis worsened by",
     "link": "https://mcdberl.com/how-grey-water-recycling-helps-solve-bangalores-water-crisis/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/07/How-Grey-Water-Recycling-Helps-Solve-Bangalores-Water-Crisis-featured-image.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/07/How-Grey-Water-Recycling-Helps-Solve-Bangalores-Water-Crisis-featured-image.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/how-grey-water-recycling-helps-solve-bangalores-water-crisis.webp",
+    "displayImage": "/assets/publications/how-grey-water-recycling-helps-solve-bangalores-water-crisis.webp"
   },
   {
     "id": "pub-67",
@@ -761,7 +802,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Net energy metering (NEM), system is a metering and billing mechanism designed to monitor and record the",
     "link": "https://mcdberl.com/empowering-solar-energy-the-net-metering-revolution-in-india-and-future-challenges/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/06/Empowering-Solar-Energy-The-Net-Metering-Revolution.jpg?fit=1500%2C1500&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/06/Empowering-Solar-Energy-The-Net-Metering-Revolution.jpg?fit=1500%2C1500&ssl=1"
+    "localImage": "/assets/publications/empowering-solar-energy-the-net-metering-revolution-in-india-and-future-challenges.jpg",
+    "displayImage": "/assets/publications/empowering-solar-energy-the-net-metering-revolution-in-india-and-future-challenges.jpg"
   },
   {
     "id": "pub-68",
@@ -772,7 +814,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "The function of the earthing system in an electrical installation is to dissipate in the ground the",
     "link": "https://mcdberl.com/is-separate-earthing-required-for-lifts-why/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/07/Is-Separate-earthing-required-for-Lifts.-Why-Featured-image.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/07/Is-Separate-earthing-required-for-Lifts.-Why-Featured-image.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/is-separate-earthing-required-for-lifts-why.webp",
+    "displayImage": "/assets/publications/is-separate-earthing-required-for-lifts-why.webp"
   },
   {
     "id": "pub-69",
@@ -783,7 +826,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Bangalore, often referred to as the Garden City of India, is renowned for its lush greenery and",
     "link": "https://mcdberl.com/preserving-bangalores-urban-canopy-battling-monsoon-mayhem/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/06/Preserving-Bangalores-Urban-Canopy-Battling-Monsoon-Mayhem%E2%80%AFFeatured-image.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/06/Preserving-Bangalores-Urban-Canopy-Battling-Monsoon-Mayhem%E2%80%AFFeatured-image.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/preserving-bangalores-urban-canopy-battling-monsoon-mayhem.webp",
+    "displayImage": "/assets/publications/preserving-bangalores-urban-canopy-battling-monsoon-mayhem.webp"
   },
   {
     "id": "pub-70",
@@ -794,7 +838,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Urban landscapes are known to be affected by the urban heat island effect (UHI), where cities experience",
     "link": "https://mcdberl.com/time-to-built-community-air-conditioners-lakes/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/06/Time-to-Built-Community-Air-Conditioners-LAKES-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/06/Time-to-Built-Community-Air-Conditioners-LAKES-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/time-to-built-community-air-conditioners-lakes.webp",
+    "displayImage": "/assets/publications/time-to-built-community-air-conditioners-lakes.webp"
   },
   {
     "id": "pub-71",
@@ -805,7 +850,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "An isolation transformer is a transformer used to transfer electrical power from a source ofalternating",
     "link": "https://mcdberl.com/are-you-still-in-the-era-of-isolation-transformer/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/06/Are-you-still-in-the-era-of-isolation-transformer-1.jpg?fit=1500%2C1500&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/06/Are-you-still-in-the-era-of-isolation-transformer-1.jpg?fit=1500%2C1500&ssl=1"
+    "localImage": "/assets/publications/are-you-still-in-the-era-of-isolation-transformer.jpg",
+    "displayImage": "/assets/publications/are-you-still-in-the-era-of-isolation-transformer.jpg"
   },
   {
     "id": "pub-72",
@@ -816,7 +862,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Mixed mode cooling refers to a cooling system that combines different methods to achieve optimal cooling efficiency.",
     "link": "https://mcdberl.com/what-is-mixed-mode-cooling/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/What-is-Mixed-Mode-Cooling.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/What-is-Mixed-Mode-Cooling.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/what-is-mixed-mode-cooling.webp",
+    "displayImage": "/assets/publications/what-is-mixed-mode-cooling.webp"
   },
   {
     "id": "pub-73",
@@ -827,7 +874,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Have you ever walked into a room and instantly felt brighter and more alive? That\u2019s not just",
     "link": "https://mcdberl.com/colors-that-improve-daylight-in-buildings/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/Colors-that-improve-Daylight-in-Buildings-featured-image.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/Colors-that-improve-Daylight-in-Buildings-featured-image.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/colors-that-improve-daylight-in-buildings.webp",
+    "displayImage": "/assets/publications/colors-that-improve-daylight-in-buildings.webp"
   },
   {
     "id": "pub-74",
@@ -838,7 +886,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "The India Meteorological Department (IMD) has forecasted above-normal rainfall for the monsoon season in 2024. This brings",
     "link": "https://mcdberl.com/preparing-buildings-for-above-normal-monsoon-rainfall-in-2024/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/Preparing-Buildings-for-Above-Normal-Monsoon-Rainfall-featured-image.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/Preparing-Buildings-for-Above-Normal-Monsoon-Rainfall-featured-image.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/preparing-buildings-for-above-normal-monsoon-rainfall-in-2024.webp",
+    "displayImage": "/assets/publications/preparing-buildings-for-above-normal-monsoon-rainfall-in-2024.webp"
   },
   {
     "id": "pub-75",
@@ -849,7 +898,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Ever wondered why some rooms make you feel at ease, while others leave you fidgeting for comfort?",
     "link": "https://mcdberl.com/the-subtle-science-of-comfort-fine-tuning-indoor-environments/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/06/The-Subtle-Science-of-Comfort-Fine-Tuning-Indoor-Environments-featured-image.jpg?fit=1500%2C1500&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/06/The-Subtle-Science-of-Comfort-Fine-Tuning-Indoor-Environments-featured-image.jpg?fit=1500%2C1500&ssl=1"
+    "localImage": "/assets/publications/the-subtle-science-of-comfort-fine-tuning-indoor-environments.jpg",
+    "displayImage": "/assets/publications/the-subtle-science-of-comfort-fine-tuning-indoor-environments.jpg"
   },
   {
     "id": "pub-76",
@@ -860,7 +910,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "It is often presumed that glazing on the northern fa\u00e7ade is not much of a concern as",
     "link": "https://mcdberl.com/light-on-the-north/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/Light-on-the-North-featured-image-final-1.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/Light-on-the-North-featured-image-final-1.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/light-on-the-north.webp",
+    "displayImage": "/assets/publications/light-on-the-north.webp"
   },
   {
     "id": "pub-77",
@@ -871,7 +922,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "When we pick colors for a building, it\u2019s usually about what looks good. But what if the",
     "link": "https://mcdberl.com/colors-that-save-energy-usage/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/Colors-That-Save-Energy-Usage-featured-image.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/Colors-That-Save-Energy-Usage-featured-image.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/colors-that-save-energy-usage.webp",
+    "displayImage": "/assets/publications/colors-that-save-energy-usage.webp"
   },
   {
     "id": "pub-78",
@@ -882,7 +934,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Groundwater\u2014the world\u2019s largest freshwater store, it is a life-sustaining resource that supplies water to billions of people,",
     "link": "https://mcdberl.com/how-deep-is-your-groundwater/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/How-deep-is-your-groundwater-featured-image-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/How-deep-is-your-groundwater-featured-image-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/how-deep-is-your-groundwater.webp",
+    "displayImage": "/assets/publications/how-deep-is-your-groundwater.webp"
   },
   {
     "id": "pub-79",
@@ -893,7 +946,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Sun studies, also known as solar analysis or solar studies, are analyses conducted to understand how sunlight",
     "link": "https://mcdberl.com/sustainable-design-starts-with-sun-studies/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/Sustainable-design-starts-with-Sun-studies-featured-image-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/Sustainable-design-starts-with-Sun-studies-featured-image-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/sustainable-design-starts-with-sun-studies.webp",
+    "displayImage": "/assets/publications/sustainable-design-starts-with-sun-studies.webp"
   },
   {
     "id": "pub-80",
@@ -904,7 +958,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "The Daylight Thumb Rule is a fundamental concept used in architectural design, particularly in optimizing natural light",
     "link": "https://mcdberl.com/rule-of-thumb-for-daylight-an-insight-into-natural-lighting-in-rooms/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/Rule-of-Thumb-for-Daylight-An-Insight-into-Natural-Lighting-in-Rooms-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/Rule-of-Thumb-for-Daylight-An-Insight-into-Natural-Lighting-in-Rooms-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/rule-of-thumb-for-daylight-an-insight-into-natural-lighting-in-rooms.webp",
+    "displayImage": "/assets/publications/rule-of-thumb-for-daylight-an-insight-into-natural-lighting-in-rooms.webp"
   },
   {
     "id": "pub-81",
@@ -915,7 +970,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Have you ever sat under a tree on a sunny day to escape the heat? If so,",
     "link": "https://mcdberl.com/mutual-shading-in-buildings/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/Mutual-Shading-in-Buildings-featured-image-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/05/Mutual-Shading-in-Buildings-featured-image-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/mutual-shading-in-buildings.webp",
+    "displayImage": "/assets/publications/mutual-shading-in-buildings.webp"
   },
   {
     "id": "pub-82",
@@ -926,7 +982,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "A novel approach to urban planning and rehabilitation known as \u201curban acupuncture\u201d sees cities as living things",
     "link": "https://mcdberl.com/urban-acupuncture-healing-cities-one-pinpoint-at-a-time/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/04/Urban-Acupuncture-Healing-Cities-One-Pinpoint-at-a-Time-Final-1.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/04/Urban-Acupuncture-Healing-Cities-One-Pinpoint-at-a-Time-Final-1.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/urban-acupuncture-healing-cities-one-pinpoint-at-a-time.webp",
+    "displayImage": "/assets/publications/urban-acupuncture-healing-cities-one-pinpoint-at-a-time.webp"
   },
   {
     "id": "pub-83",
@@ -937,7 +994,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "From wood and steel to water and electricity, the construction of our homes, offices, andinfrastructure",
     "link": "https://mcdberl.com/circular-economy-solutions-a-key-strategy-for-climate-resilience/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/04/Circular-Economy-Solutions-A-Key-Strategy-for-Climate-Resilience.png?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/04/Circular-Economy-Solutions-A-Key-Strategy-for-Climate-Resilience.png?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/circular-economy-solutions-a-key-strategy-for-climate-resilience.png",
+    "displayImage": "/assets/publications/circular-economy-solutions-a-key-strategy-for-climate-resilience.png"
   },
   {
     "id": "pub-84",
@@ -948,7 +1006,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "In the big picture of human advancement, building cities and towns represents progress and chances for many",
     "link": "https://mcdberl.com/the-four-laws-of-disaster-risk-the-urbanization-dilemma/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/04/The-Four-Laws-of-Disaster-Risk-The-Urbanization-Dilemma-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/04/The-Four-Laws-of-Disaster-Risk-The-Urbanization-Dilemma-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/the-four-laws-of-disaster-risk-the-urbanization-dilemma.webp",
+    "displayImage": "/assets/publications/the-four-laws-of-disaster-risk-the-urbanization-dilemma.webp"
   },
   {
     "id": "pub-85",
@@ -959,7 +1018,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "As temperatures soar during the scorching heat of summer, finding ways to stay cool becomes essential for",
     "link": "https://mcdberl.com/how-to-protect-yourself-from-scorching-temperatures/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/04/How-to-Protect-Yourself-from-Scorching-Temperatures-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/04/How-to-Protect-Yourself-from-Scorching-Temperatures-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/how-to-protect-yourself-from-scorching-temperatures.webp",
+    "displayImage": "/assets/publications/how-to-protect-yourself-from-scorching-temperatures.webp"
   },
   {
     "id": "pub-86",
@@ -970,7 +1030,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Climate change is a reality that\u2019s undeniably altering the fabric of our ecosystems, economies, and societies. In",
     "link": "https://mcdberl.com/global-goal-on-adaptation-the-road-ahead/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/04/Global-Goal-on-Adaptation-The-Road-Ahead-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/04/Global-Goal-on-Adaptation-The-Road-Ahead-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/global-goal-on-adaptation-the-road-ahead.webp",
+    "displayImage": "/assets/publications/global-goal-on-adaptation-the-road-ahead.webp"
   },
   {
     "id": "pub-87",
@@ -981,7 +1042,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "The quality of the air we breathe indoors profoundly influences our health and well-being. With a",
     "link": "https://mcdberl.com/enhancing-indoor-air-quality-the-vital-role-of-hvac-systems/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/04/Enhancing-Indoor-Air-Quality-The-Vital-Role-of-HVAC-Systems-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/04/Enhancing-Indoor-Air-Quality-The-Vital-Role-of-HVAC-Systems-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/enhancing-indoor-air-quality-the-vital-role-of-hvac-systems.webp",
+    "displayImage": "/assets/publications/enhancing-indoor-air-quality-the-vital-role-of-hvac-systems.webp"
   },
   {
     "id": "pub-88",
@@ -992,7 +1054,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "As the world becomes increasingly aware of the devastating impact of climate change, more and more individuals",
     "link": "https://mcdberl.com/green-financing-paving-the-way-for-a-sustainable-future/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/03/Green-Financing-Paving-the-Way-for-a-Sustainable-Future-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/03/Green-Financing-Paving-the-Way-for-a-Sustainable-Future-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/green-financing-paving-the-way-for-a-sustainable-future.webp",
+    "displayImage": "/assets/publications/green-financing-paving-the-way-for-a-sustainable-future.webp"
   },
   {
     "id": "pub-89",
@@ -1003,7 +1066,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "As engineers, developers, consumers and policy makers we have too long carried the linear idea in water",
     "link": "https://mcdberl.com/redefining-water-management-embracing-the-circular-approach/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/03/Redefining-Water-Management-Embracing-the-Circular-Approach-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/03/Redefining-Water-Management-Embracing-the-Circular-Approach-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/redefining-water-management-embracing-the-circular-approach.webp",
+    "displayImage": "/assets/publications/redefining-water-management-embracing-the-circular-approach.webp"
   },
   {
     "id": "pub-90",
@@ -1014,7 +1078,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "In our ongoing battle against climate change, enhancing biological carbon offsets has become a vital strategy for",
     "link": "https://mcdberl.com/innovative-approaches-to-enhance-biological-carbon-offsets-in-the-building-sector/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/03/Innovative-Approaches-to-Enhance-Biological-Carbon-Offsets-in-the-Building-Sector-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/03/Innovative-Approaches-to-Enhance-Biological-Carbon-Offsets-in-the-Building-Sector-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/innovative-approaches-to-enhance-biological-carbon-offsets-in-the-building-sector.webp",
+    "displayImage": "/assets/publications/innovative-approaches-to-enhance-biological-carbon-offsets-in-the-building-sector.webp"
   },
   {
     "id": "pub-91",
@@ -1025,7 +1090,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Focusing only on renewable energy for making buildings greener is like being drawn to the cherry on",
     "link": "https://mcdberl.com/the-role-of-buildings-for-a-decarbonized-future/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/03/The-Role-of-Buildings-for-a-Decarbonized-Future-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/03/The-Role-of-Buildings-for-a-Decarbonized-Future-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/the-role-of-buildings-for-a-decarbonized-future.webp",
+    "displayImage": "/assets/publications/the-role-of-buildings-for-a-decarbonized-future.webp"
   },
   {
     "id": "pub-92",
@@ -1036,7 +1102,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Transformers are electrical devices that transfer electrical energy between circuits through electromagnetic induction. They come in two",
     "link": "https://mcdberl.com/choosing-between-dry-or-oil-type-transformers-navigating-the-currents-of-reliability-and-efficiency/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/03/Choosing-Between-Dry-or-Oil-Type-Transformers-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/03/Choosing-Between-Dry-or-Oil-Type-Transformers-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/choosing-between-dry-or-oil-type-transformers-navigating-the-currents-of-reliability-and-efficiency.webp",
+    "displayImage": "/assets/publications/choosing-between-dry-or-oil-type-transformers-navigating-the-currents-of-reliability-and-efficiency.webp"
   },
   {
     "id": "pub-93",
@@ -1047,7 +1114,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Climate change presents a universal challenge, yet its repercussions are disproportionately distributed across the world, affecting nations,",
     "link": "https://mcdberl.com/addressing-the-unequal-burden-of-climate-change-a-multifaceted-challenge/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/02/Addressing-the-Unequal-Burden-of-Climate-Change-A-Multifaceted-Challenge.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/02/Addressing-the-Unequal-Burden-of-Climate-Change-A-Multifaceted-Challenge.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/addressing-the-unequal-burden-of-climate-change-a-multifaceted-challenge.webp",
+    "displayImage": "/assets/publications/addressing-the-unequal-burden-of-climate-change-a-multifaceted-challenge.webp"
   },
   {
     "id": "pub-94",
@@ -1058,7 +1126,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Climate change is intricately linked to human emissions of greenhouse gases, and businesses play a crucial role",
     "link": "https://mcdberl.com/direct-indirect-and-avoided-emissions-through-scope-1-2-3-and-4/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/02/Direct-Indirect-and-Avoided-Emissions-through-Scope-1-2-3-and-4-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/02/Direct-Indirect-and-Avoided-Emissions-through-Scope-1-2-3-and-4-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/direct-indirect-and-avoided-emissions-through-scope-1-2-3-and-4.webp",
+    "displayImage": "/assets/publications/direct-indirect-and-avoided-emissions-through-scope-1-2-3-and-4.webp"
   },
   {
     "id": "pub-95",
@@ -1069,7 +1138,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Today\u2019s electrical power systems are plagued by a variety of disturbances ranging from short-duration sags, swells, and",
     "link": "https://mcdberl.com/revolutionizing-power-backup-exploring-the-advantages-of-flywheel-ups-systems/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/02/Revolutionizing-Power-Backup-Exploring-the-Advantages-of-Flywheel-UPS-Systems-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/02/Revolutionizing-Power-Backup-Exploring-the-Advantages-of-Flywheel-UPS-Systems-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/revolutionizing-power-backup-exploring-the-advantages-of-flywheel-ups-systems.webp",
+    "displayImage": "/assets/publications/revolutionizing-power-backup-exploring-the-advantages-of-flywheel-ups-systems.webp"
   },
   {
     "id": "pub-96",
@@ -1080,7 +1150,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Climate change is not a distant threat but a reality that is reshaping the world around us.",
     "link": "https://mcdberl.com/the-changing-landscape-impact-of-climate-cange-on-construction-sector/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/02/The-Changing-Landscape-Impact-of-Climate-Change-on-Construction-Sector-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/02/The-Changing-Landscape-Impact-of-Climate-Change-on-Construction-Sector-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/the-changing-landscape-impact-of-climate-cange-on-construction-sector.webp",
+    "displayImage": "/assets/publications/the-changing-landscape-impact-of-climate-cange-on-construction-sector.webp"
   },
   {
     "id": "pub-97",
@@ -1091,7 +1162,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "As cities flourish and the world grapples with environmental challenges, there arises an urgent need for structures",
     "link": "https://mcdberl.com/role-of-mechanical-engineer-in-making-sustainable-buildings/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/02/Role-of-Mechanical-Engineer-in-making-Sustainable-Buildings-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/02/Role-of-Mechanical-Engineer-in-making-Sustainable-Buildings-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/role-of-mechanical-engineer-in-making-sustainable-buildings.webp",
+    "displayImage": "/assets/publications/role-of-mechanical-engineer-in-making-sustainable-buildings.webp"
   },
   {
     "id": "pub-98",
@@ -1102,7 +1174,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "In the quest for sustainable and efficient building management practices, the reuse of air conditioning (AC) condensate",
     "link": "https://mcdberl.com/harvesting-air-conditioning-condensate-for-cooling-tower-operations-a-sustainable-approach/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/02/Harvesting-Air-Conditioning-Condensate-for-Cooling-Tower-Operations-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/02/Harvesting-Air-Conditioning-Condensate-for-Cooling-Tower-Operations-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/harvesting-air-conditioning-condensate-for-cooling-tower-operations-a-sustainable-approach.webp",
+    "displayImage": "/assets/publications/harvesting-air-conditioning-condensate-for-cooling-tower-operations-a-sustainable-approach.webp"
   },
   {
     "id": "pub-99",
@@ -1113,7 +1186,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "In an era where environmental conservation is not just a necessity but a duty, the Central Board",
     "link": "https://mcdberl.com/embracing-sustainability-the-shunya-audit-initiative-for-schools/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/02/Embracing-Sustainability-The-SHUNYA-featured-image.jpg?fit=1500%2C1500&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/02/Embracing-Sustainability-The-SHUNYA-featured-image.jpg?fit=1500%2C1500&ssl=1"
+    "localImage": "/assets/publications/embracing-sustainability-the-shunya-audit-initiative-for-schools.jpg",
+    "displayImage": "/assets/publications/embracing-sustainability-the-shunya-audit-initiative-for-schools.jpg"
   },
   {
     "id": "pub-100",
@@ -1124,6 +1198,7 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     "excerpt": "Ever wondered why cables matter in our electrical world? Well, here\u2019s the Fact: cables have a secret",
     "link": "https://mcdberl.com/why-cable-derating-matters/",
     "image": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/02/Why-Cable-Derating-Matters-final.webp?fit=1080%2C1080&ssl=1",
-    "displayImage": "https://i0.wp.com/mcdberl.com/wp-content/uploads/2024/02/Why-Cable-Derating-Matters-final.webp?fit=1080%2C1080&ssl=1"
+    "localImage": "/assets/publications/why-cable-derating-matters.webp",
+    "displayImage": "/assets/publications/why-cable-derating-matters.webp"
   }
 ];
