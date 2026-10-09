@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 export interface Partner {
@@ -279,26 +280,17 @@ export default function PartnersSection() {
         <motion.div
           key="grid-view"
           className="partner-grid-motion"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={{
-            hidden: { opacity: 0 },
-            show: {
-              opacity: 1,
-              transition: { staggerChildren: 0.04, delayChildren: 0.1 }
-            }
-          }}
+          layout
         >
-          {filteredPartners.map((partner) => (
+          <AnimatePresence mode="popLayout" initial={false}>
+          {filteredPartners.map((partner, index) => (
             <motion.div
               key={partner.id}
               layout
               className="partner-card"
-              variants={{
-                hidden: { opacity: 0, y: 15 },
-                show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.25, 0.1, 0.25, 1] } }
-              }}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0, transition: { duration: 0.4, delay: index * 0.03, ease: [0.25, 0.1, 0.25, 1] } }}
+              exit={{ opacity: 0, scale: 0.96, transition: { duration: 0.2 } }}
               whileHover={{ y: -5, transition: { duration: 0.25 } }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setSelectedPartner(partner)}
@@ -335,6 +327,7 @@ export default function PartnersSection() {
               </div>
             </motion.div>
           ))}
+          </AnimatePresence>
         </motion.div>
       ) : (
         /* Motion Stream / Infinite Marquee */
@@ -409,8 +402,8 @@ export default function PartnersSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <a className="text-link partners-cta" href="#contact">
-          Know our partners
+        <Link className="text-link partners-cta" href="/meet-our-partners">
+          Know more about our partners
           <motion.span
             className="arrow-motion"
             animate={{ x: [0, 3, 0], y: [0, -3, 0] }}
@@ -418,7 +411,7 @@ export default function PartnersSection() {
           >
             ↗
           </motion.span>
-        </a>
+        </Link>
       </motion.div>
 
       {/* Interactive Detail Modal on Click */}
@@ -478,12 +471,19 @@ export default function PartnersSection() {
               </div>
 
               <div className="modal-footer">
-                <a
-                  href="#contact"
+                <Link
+                  href="/meet-our-partners"
                   className="modal-action-btn"
                   onClick={() => setSelectedPartner(null)}
                 >
-                  Partner With McD BERL <span>↗</span>
+                  Meet All Partners <span>↗</span>
+                </Link>
+                <a
+                  href="#contact"
+                  className="modal-secondary-btn"
+                  onClick={() => setSelectedPartner(null)}
+                >
+                  Partner With Us
                 </a>
               </div>
             </motion.div>

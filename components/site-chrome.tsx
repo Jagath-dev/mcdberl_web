@@ -4,29 +4,34 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { sectorNav } from "../lib/sector-nav";
 
 const A = "/assets/";
 
+const sectorSubItems = sectorNav.map((s) => ({ label: s.label, href: `/${s.slug}/` }));
+
 const publicationSubItems = [
   { label: "Articles and Blogs", href: "/publications" },
-  { label: "Case Studies", href: "/publications?category=case-studies" },
-  { label: "Media", href: "/publications?category=media" },
-  { label: "Research Paper", href: "/publications?category=research-paper" },
-  { label: "News and Features", href: "/publications?category=news-and-features" },
+  { label: "Case Studies", href: "/case-studiess" },
+  { label: "Media", href: "/media" },
+  { label: "Research Paper", href: "/research-paper" },
+  { label: "News and Features", href: "/news-and-features" },
 ];
+
+type NavItem = { label: string; href: string; children?: { label: string; href: string }[] };
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
   const [hash, setHash] = useState("");
 
-  const nav = [
+  const nav: NavItem[] = [
     { label: "Home", href: "/" },
-    { label: "Sectors", href: "/#sectors" },
+    { label: "Sectors", href: "/projects", children: sectorSubItems },
     { label: "Services", href: "/services" },
     { label: "Projects", href: "/projects" },
-    { label: "Publications", href: "/publications", hasDropdown: true },
+    { label: "Publications", href: "/publications", children: publicationSubItems },
     { label: "About", href: "/about" },
     { label: "Careers", href: "/careers" },
     { label: "Contact", href: "/contact" }
@@ -39,13 +44,34 @@ export function SiteHeader() {
     return () => window.removeEventListener("hashchange", syncHash);
   }, []);
 
-  const isActive = (href: string) => {
-    const [path, anchor] = href.split("#");
-    if (anchor) return pathname === path && hash === `#${anchor}`;
+  useEffect(() => {
+    setOpenDropdown(null);
+  }, [pathname]);
+
+  const trimmed = pathname.replace(/\/$/, "") || "/";
+  const isSectorPage = sectorSubItems.some((s) => s.href.replace(/\/$/, "") === trimmed);
+
+  const isActive = (item: NavItem) => {
+    if (item.label === "Sectors") return isSectorPage;
+    const [path, anchor] = item.href.split("#");
+    if (anchor) return trimmed === path && hash === `#${anchor}`;
     if (path === "/publications") {
-      return pathname === "/publications" || pathname === "/articles-and-blog";
+      return (
+        trimmed === "/publications" ||
+        trimmed === "/articles-and-blog" ||
+        trimmed === "/case-studiess" ||
+        trimmed === "/case-studies" ||
+        trimmed === "/media" ||
+        trimmed === "/research-paper" ||
+        trimmed === "/news-and-features"
+      );
     }
-    return pathname === path || (path !== "/" && pathname.startsWith(`${path}/`));
+    return trimmed === path || (path !== "/" && trimmed.startsWith(`${path}/`));
+  };
+
+  const closeAll = () => {
+    setOpen(false);
+    setOpenDropdown(null);
   };
 
   return (
@@ -55,36 +81,66 @@ export function SiteHeader() {
       </Link>
       <nav className={open ? "main-nav is-open" : "main-nav"} aria-label="Primary navigation">
         {nav.map((item) => {
-          if (item.hasDropdown) {
+          const active = isActive(item);
+          if (item.children) {
+            const isOpen = openDropdown === item.label;
+            const menuId = `nav-menu-${item.label.toLowerCase()}`;
             return (
               <div
-                key={item.href}
-                className="nav-dropdown-item"
-                onMouseEnter={() => setDropdownOpen(true)}
-                onMouseLeave={() => setDropdownOpen(false)}
+                key={item.label}
+                className={`nav-dropdown-item ${isOpen ? "is-open" : ""}`}
+                onMouseEnter={() => setOpenDropdown(item.label)}
+                onMouseLeave={() => setOpenDropdown(null)}
+                onKeyDown={(e) => {
+                  if (e.key === "Escape") setOpenDropdown(null);
+                }}
               >
-                <Link
-                  className={isActive(item.href) ? "is-active" : undefined}
-                  aria-current={isActive(item.href) ? "page" : undefined}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                >
-                  {item.label}
-                </Link>
-                <div className={`nav-dropdown-menu ${dropdownOpen ? "is-open" : ""}`}>
-                  {publicationSubItems.map((sub) => {
+                <div className="nav-dropdown-trigger">
+                  <Link
+                    className={active ? "is-active" : undefined}
+                    aria-current={active ? "page" : undefined}
+                    href={item.href}
+                    onClick={closeAll}
+                  >
+                    {item.label}
+                  </Link>
+                  <button
+                    type="button"
+                    className="nav-dropdown-toggle"
+                    aria-label={`${isOpen ? "Hide" : "Show"} ${item.label} menu`}
+                    aria-expanded={isOpen}
+                    aria-controls={menuId}
+                    onClick={() => setOpenDropdown(isOpen ? null : item.label)}
+                  >
+                    <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true">
+                      <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.6" />
+                    </svg>
+                  </button>
+                </div>
+                <div id={menuId} className={`nav-dropdown-menu ${isOpen ? "is-open" : ""}`}>
+                  {item.children.map((sub) => {
+                    const subPath = sub.href.split("?")[0].replace(/\/$/, "");
                     const isSubActive =
-                      (sub.label === "Articles and Blogs" &&
-                        (pathname === "/publications" || pathname === "/articles-and-blog"));
+                      item.label === "Sectors"
+                        ? subPath === trimmed
+                        : sub.label === "Articles and Blogs"
+                        ? trimmed === "/publications" || trimmed === "/articles-and-blog"
+                        : sub.label === "Case Studies"
+                        ? trimmed === "/case-studiess" || trimmed === "/case-studies"
+                        : sub.label === "Media"
+                        ? trimmed === "/media"
+                        : sub.label === "Research Paper"
+                        ? trimmed === "/research-paper"
+                        : sub.label === "News and Features"
+                        ? trimmed === "/news-and-features"
+                        : false;
                     return (
                       <Link
                         key={sub.label}
                         href={sub.href}
                         className={`nav-dropdown-link ${isSubActive ? "is-sub-active" : ""}`}
-                        onClick={() => {
-                          setOpen(false);
-                          setDropdownOpen(false);
-                        }}
+                        aria-current={isSubActive ? "page" : undefined}
+                        onClick={closeAll}
                       >
                         {sub.label}
                       </Link>
@@ -97,11 +153,11 @@ export function SiteHeader() {
 
           return (
             <Link
-              className={isActive(item.href) ? "is-active" : undefined}
-              aria-current={isActive(item.href) ? "page" : undefined}
-              key={item.href}
+              className={active ? "is-active" : undefined}
+              aria-current={active ? "page" : undefined}
+              key={item.label}
               href={item.href}
-              onClick={() => setOpen(false)}
+              onClick={closeAll}
             >
               {item.label}
             </Link>

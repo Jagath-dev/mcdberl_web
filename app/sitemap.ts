@@ -1,8 +1,13 @@
 import type { MetadataRoute } from "next";
-import { projects } from "../lib/site-data";
+import { sectorProjects, sectors } from "../lib/projects-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://mcdberl.com";
-  const pages = ["", "/about/", "/services/", "/projects/", "/careers/", "/publications/", "/contact/"];
-  return [...pages.map((path) => ({ url: `${base}${path}`, lastModified: new Date("2026-10-09"), changeFrequency: "monthly" as const })), ...projects.map((project) => ({ url: `${base}/projects/${project.slug}/`, lastModified: new Date("2026-10-09"), changeFrequency: "yearly" as const }))];
+  const lastModified = new Date("2026-10-09");
+  const pages = ["", "/about/", "/services/", "/projects/", "/careers/", "/publications/", "/contact/", "/meet-our-partners/", "/case-studiess/", "/media/", "/research-paper/", "/news-and-features/"];
+  return [
+    ...pages.map((path) => ({ url: `${base}${path}`, lastModified, changeFrequency: "monthly" as const })),
+    ...sectors.map((sector) => ({ url: `${base}/${sector.slug}/`, lastModified, changeFrequency: "monthly" as const })),
+    ...sectorProjects.map((project) => ({ url: `${base}/projects/${project.slug}/`, lastModified, changeFrequency: "yearly" as const })),
+  ];
 }
