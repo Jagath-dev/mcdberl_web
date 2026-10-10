@@ -147,7 +147,7 @@ function PublicationsView({ posts, typeParam }: { posts: PublicationCard[]; type
                   >
                     <div className="pub-card-image-wrap">
                       <Image
-                        src={post.displayImage || "/assets/about/about-hero-banner.jpg"}
+                        src={post.displayImage || "/assets/about/about-team-illustration.jpg"}
                         alt={post.title}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

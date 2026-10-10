@@ -3,7 +3,7 @@ import { sectorProjects, sectors } from "./projects-data";
 /** Source images (in /public) for the 1200x630 social share images served at /og/<name>.jpg. */
 const pageImages: Record<string, string> = {
   home: "/assets/team/team-net-zero.jpg",
-  about: "/assets/about/about-hero-banner.jpg",
+  about: "/assets/about/about-team-illustration.jpg",
   services: "/assets/services/services-hero.webp",
   projects: "/assets/projects/projects-hero.webp",
   careers: "/assets/careers/pexels-mikhail-nilov-8297617.jpg",
@@ -13,7 +13,7 @@ const pageImages: Record<string, string> = {
   partners: "/assets/partners/meet-our-partners-banner.webp",
   news: "/assets/news-and-features/hero-banner.avif",
   research: "/assets/research-paper/research-banner.jpg",
-  articles: "/assets/about/about-hero-banner.jpg",
+  articles: "/assets/about/about-team-illustration.jpg",
 };
 
 export const ogImageSources: Record<string, string> = {

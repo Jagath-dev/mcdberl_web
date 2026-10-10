@@ -124,7 +124,7 @@ export default function AboutClient() {
         {/* Full-width official banner matching live site */}
         <section className="about-hero-banner" aria-label="About McD BERL banner">
           <Image
-            src="/assets/about/about-hero-banner.jpg"
+            src="/assets/about/about-team-illustration.jpg"
             alt="McD BERL - Leading MEP, Green Buildings and Sustainability Consultants"
             fill
             priority
