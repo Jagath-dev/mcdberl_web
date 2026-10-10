@@ -154,7 +154,7 @@ export default function AboutClient() {
             {/* Values Card */}
             <div className="about-vm-card values-card">
               <p className="eyebrow">Core Principles</p>
-              <h3>Values</h3>
+              <h2>Values</h2>
               <p>
                 Every project we work on, the design we deliver, and the insights we share stem from a holistic foundation of our core values:
               </p>
@@ -210,6 +210,7 @@ export default function AboutClient() {
                   key={c}
                   type="button"
                   className={`footprint-filter-btn ${selectedCountry === c ? "is-active" : ""}`}
+                  aria-pressed={selectedCountry === c}
                   onClick={() => setSelectedCountry(c)}
                 >
                   {c} ({count})
@@ -362,7 +363,7 @@ export default function AboutClient() {
                   <div className="footprint-project-top">
                     <span className="footprint-country-tag">{proj.country}</span>
                   </div>
-                  <h4>{proj.name}</h4>
+                  <h3>{proj.name}</h3>
                 </div>
                 <p>{proj.category}</p>
               </div>

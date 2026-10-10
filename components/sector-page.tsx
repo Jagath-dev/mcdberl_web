@@ -4,16 +4,19 @@ import { notFound } from "next/navigation";
 import { SiteFooter, SiteHeader } from "./site-chrome";
 import { getSector, getSectorProjects, sectors } from "../lib/projects-data";
 import { breadcrumbJsonLd, jsonLd } from "../lib/site";
+import { pageMetadata } from "../lib/seo";
+import { sectorOgImage } from "../lib/og-images";
 
 export function sectorMetadata(slug: string) {
   const sector = getSector(slug);
   if (!sector) return {};
-  return {
-    title: `${sector.label} | Sectors | McD BERL`,
+  return pageMetadata({
+    title: `Sustainable ${sector.label} Projects | McD BERL`,
     description: sector.description,
-    alternates: { canonical: `/${sector.slug}/` },
-    openGraph: { title: `${sector.label} | McD BERL`, description: sector.description, url: `/${sector.slug}/`, images: [{ url: sector.bannerImage, alt: sector.label }] },
-  };
+    path: `/${sector.slug}/`,
+    image: sectorOgImage(sector.slug),
+    imageAlt: sector.label,
+  });
 }
 
 export default function SectorPage({ slug }: { slug: string }) {

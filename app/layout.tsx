@@ -14,20 +14,9 @@ export const metadata: Metadata = {
     siteName: "McD BERL Pvt Ltd",
     locale: "en_IN",
     url: "https://mcdberl.com",
-    images: [{ url: "/assets/team/team-net-zero.jpg", width: 1500, height: 1000, alt: "McD BERL sustainable built environment" }]
+    images: [{ url: "/og/home.jpg", width: 1200, height: 630, alt: "McD BERL sustainable built environment" }]
   },
-  twitter: { card: "summary_large_image", title: "McD BERL", description: "Engineering a Sustainable Future" },
-  icons: {
-    icon: [
-      { url: "/assets/branding/mcd-icon.jpg" },
-      { url: "/assets/branding/mcd-icon.jpg", sizes: "32x32", type: "image/jpeg" },
-      { url: "/assets/branding/mcd-icon.jpg", sizes: "192x192", type: "image/jpeg" }
-    ],
-    shortcut: "/assets/branding/mcd-icon.jpg",
-    apple: [
-      { url: "/assets/branding/mcd-icon.jpg", sizes: "180x180", type: "image/jpeg" }
-    ]
-  },
+  twitter: { card: "summary_large_image", site: "@_mcdberl", title: "McD BERL | Engineering a Sustainable Future", description: "Leading a global transformation in how the world builds.", images: ["/og/home.jpg"] },
   robots: { index: true, follow: true }
 };
 

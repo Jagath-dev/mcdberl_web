@@ -75,6 +75,7 @@ export default function MeetOurPartnersClient() {
                   type="button"
                   onClick={() => setSelectedCategory(cat)}
                   className={`partners-tab-btn ${isActive ? "is-active" : ""}`}
+                  aria-pressed={isActive}
                 >
                   <span>{cat}</span>
                   <span className="partners-tab-count">{count}</span>

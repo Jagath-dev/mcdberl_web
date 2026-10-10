@@ -71,6 +71,7 @@ export default function MediaClient() {
                   type="button"
                   onClick={() => setSelectedCategory(cat)}
                   className={`media-tab-btn ${isActive ? "is-active" : ""}`}
+                  aria-pressed={isActive}
                 >
                   <span>{cat}</span>
                   <span className="media-tab-count">{count}</span>
@@ -135,6 +136,7 @@ export default function MediaClient() {
               <article key={video.id} className="media-video-card">
                 <div className="media-player-wrapper">
                   <iframe
+                    loading="lazy"
                     src={`https://www.youtube.com/embed/${video.youtubeId}?rel=0`}
                     title={video.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

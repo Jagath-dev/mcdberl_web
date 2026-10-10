@@ -1,19 +1,31 @@
 import type { Metadata } from "next";
 import ContactClient from "./contact-client";
+import { JsonLd } from "../../components/json-ld";
+import { SITE_URL, breadcrumbJsonLd, organizationJsonLd } from "../../lib/site";
+import { pageMetadata } from "../../lib/seo";
+import { ogImage } from "../../lib/og-images";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Contact Us | McD BERL Pvt Ltd",
-  description:
-    "Get in touch with McD BERL for sustainable building engineering, MEP design, energy modelling and net zero consulting. Share your project brief and our team will respond.",
-  alternates: { canonical: "/contact/" },
-  openGraph: {
-    title: "Contact Us | McD BERL Pvt Ltd",
-    description: "Reach out to McD BERL for a consultation on sustainable, high-performance buildings.",
-    url: "/contact/",
-    images: [{ url: "/assets/contact/contact-hero.jpg", alt: "Contact McD BERL" }],
-  },
+  description: "Contact McD BERL in Bengaluru or Mumbai for MEP design, energy modelling, green building certification and net zero consulting. Share your project brief.",
+  path: "/contact/",
+  image: ogImage("contact"),
+  imageAlt: "Contact McD BERL",
+});
+
+const contactPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  url: `${SITE_URL}/contact/`,
+  name: "Contact McD BERL",
+  mainEntity: organizationJsonLd,
 };
 
 export default function ContactPage() {
-  return <ContactClient />;
+  return (
+    <>
+      <ContactClient />
+      <JsonLd data={[breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Contact", path: "/contact/" }]), contactPageJsonLd]} />
+    </>
+  );
 }

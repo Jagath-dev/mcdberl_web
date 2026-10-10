@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useDialog } from "../../lib/use-dialog";
 import {
   CASE_STUDIES_DATA,
   CASE_STUDIES_CATEGORIES,
@@ -11,14 +12,24 @@ import {
 
 export default function CaseStudiesClient() {
   const [activeModalItem, setActiveModalItem] = useState<CaseStudyItem | null>(null);
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formState, setFormState] = useState<"idle" | "submitting" | "submitted" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     organization: "",
     phone: "",
-    message: ""
+    message: "",
+    website: ""
   });
+  const formSubmitted = formState === "submitted";
+
+  const closeModal = () => {
+    setActiveModalItem(null);
+    setFormState("idle");
+    setErrorMessage("");
+  };
+  const dialogRef = useDialog<HTMLDivElement>(activeModalItem !== null, closeModal);
 
   const handleScrollTo = (sectionId: string) => {
     const el = document.getElementById(sectionId);
@@ -27,17 +38,40 @@ export default function CaseStudiesClient() {
     }
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  // Case study requests are stored with contact enquiries so the team can email the document.
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setFormSubmitted(true);
-    setTimeout(() => {
-      // simulate download or close after success
-      setTimeout(() => {
-        setActiveModalItem(null);
-        setFormSubmitted(false);
-        setFormData({ name: "", email: "", organization: "", phone: "", message: "" });
-      }, 2500);
-    }, 500);
+    if (!activeModalItem) return;
+    setFormState("submitting");
+    setErrorMessage("");
+
+    const note = formData.message.trim();
+    try {
+      const res = await fetch("/api/contact/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.organization,
+          message: `Case study request: ${activeModalItem.title}${note ? `\n\n${note}` : ""}`,
+          website: formData.website
+        })
+      });
+
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({}));
+        setErrorMessage(errorData.error || "We couldn't send your request right now. Please try again or email info@mcdberl.com.");
+        setFormState("error");
+        return;
+      }
+
+      setFormState("submitted");
+    } catch {
+      setErrorMessage("We couldn't send your request right now. Please try again or email info@mcdberl.com.");
+      setFormState("error");
+    }
   };
 
   const netZeroStudies = CASE_STUDIES_DATA.filter(
@@ -112,6 +146,7 @@ export default function CaseStudiesClient() {
                     {study.mediaType === "video" && (
                       <div className="casestudy-video-frame">
                         <iframe
+                          loading="lazy"
                           src={`${study.mediaSrc}?rel=0`}
                           title={study.title}
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -156,7 +191,7 @@ export default function CaseStudiesClient() {
                         <polyline points="7 10 12 15 17 10" />
                         <line x1="12" y1="15" x2="12" y2="3" />
                       </svg>
-                      <span>Download</span>
+                      <span>Get the case study</span>
                     </button>
                   </div>
                 </article>
@@ -179,6 +214,7 @@ export default function CaseStudiesClient() {
                   {study.mediaType === "video" && (
                     <div className="casestudy-video-frame">
                       <iframe
+                        loading="lazy"
                         src={`${study.mediaSrc}?rel=0`}
                         title={study.title}
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -223,7 +259,7 @@ export default function CaseStudiesClient() {
                       <polyline points="7 10 12 15 17 10" />
                       <line x1="12" y1="15" x2="12" y2="3" />
                     </svg>
-                    <span>Download</span>
+                    <span>Get the case study</span>
                   </button>
                 </div>
               </article>
@@ -289,7 +325,7 @@ export default function CaseStudiesClient() {
                       <polyline points="7 10 12 15 17 10" />
                       <line x1="12" y1="15" x2="12" y2="3" />
                     </svg>
-                    <span>Download</span>
+                    <span>Get the case study</span>
                   </button>
                 </div>
               </article>
@@ -316,21 +352,21 @@ export default function CaseStudiesClient() {
       {activeModalItem && (
         <div
           className="casestudy-modal-backdrop"
-          onClick={() => {
-            if (!formSubmitted) setActiveModalItem(null);
-          }}
+          onClick={closeModal}
           role="dialog"
           aria-modal="true"
           aria-labelledby="modal-case-title"
         >
           <div
+            ref={dialogRef}
+            tabIndex={-1}
             className="casestudy-modal-window"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               type="button"
               className="casestudy-modal-close"
-              onClick={() => setActiveModalItem(null)}
+              onClick={closeModal}
               aria-label="Close dialog"
             >
               ✕
@@ -339,20 +375,21 @@ export default function CaseStudiesClient() {
             {formSubmitted ? (
               <div className="casestudy-modal-success">
                 <div className="success-icon">✓</div>
-                <h3>Download Request Received!</h3>
+                <h3>Request received</h3>
                 <p>
-                  Thank you, <strong>{formData.name}</strong>. Your requested case study for{" "}
-                  <strong>{activeModalItem.title}</strong> has been sent to{" "}
-                  <strong>{formData.email}</strong>.
+                  Thank you, <strong>{formData.name}</strong>. Our team will email the{" "}
+                  <strong>{activeModalItem.title}</strong> case study to <strong>{formData.email}</strong> shortly.
                 </p>
-                <div className="success-progress-bar" />
+                <button type="button" className="form-submit-btn" onClick={closeModal}>
+                  Close
+                </button>
               </div>
             ) : (
               <>
                 <div className="casestudy-modal-header">
                   <span className="casestudy-modal-badge">{activeModalItem.category}</span>
                   <h3 id="modal-case-title" className="casestudy-modal-title">
-                    Fill the form to Download
+                    Request this case study
                   </h3>
                   <p className="casestudy-modal-subtitle">
                     Access the complete technical whitepaper & engineering specifications for{" "}
@@ -361,6 +398,23 @@ export default function CaseStudiesClient() {
                 </div>
 
                 <form onSubmit={handleFormSubmit} className="casestudy-form">
+                  {errorMessage && (
+                    <div className="form-error-banner" role="alert">
+                      {errorMessage}
+                    </div>
+                  )}
+
+                  <input
+                    type="text"
+                    name="website"
+                    className="form-honeypot"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    value={formData.website}
+                    onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                  />
+
                   <div className="form-group">
                     <label htmlFor="cs-name">Full Name *</label>
                     <input
@@ -434,8 +488,8 @@ export default function CaseStudiesClient() {
                     />
                   </div>
 
-                  <button type="submit" className="form-submit-btn">
-                    Submit &amp; Download Document <span>→</span>
+                  <button type="submit" className="form-submit-btn" disabled={formState === "submitting"}>
+                    {formState === "submitting" ? "Sending request..." : "Request case study"} <span>→</span>
                   </button>
                 </form>
               </>

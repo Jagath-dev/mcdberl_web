@@ -1,31 +1,18 @@
 import type { Metadata } from "next";
 import { SiteHeader, SiteFooter } from "../../components/site-chrome";
 import NewsFeaturesClient from "./news-features-client";
+import { JsonLd } from "../../components/json-ld";
+import { breadcrumbJsonLd } from "../../lib/site";
+import { pageMetadata } from "../../lib/seo";
+import { ogImage } from "../../lib/og-images";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "News and Features | McD BERL Pvt Ltd",
-  description:
-    "We advance sustainable construction with research on MEP design, smart buildings, and climate-positive innovations to reduce CO₂ emissions. Stay updated with McD BERL's latest industry recognitions, conclaves, lectures, and media features.",
-  alternates: {
-    canonical: "/news-and-features/",
-  },
-  openGraph: {
-    title: "News and Features | McD BERL Pvt Ltd",
-    description:
-      "Stay informed with the latest media features, industry highlights, and recognitions from McD BERL Built Environment Research Laboratory.",
-    url: "https://mcdberl.com/news-and-features/",
-    siteName: "McD BERL Pvt Ltd",
-    images: [
-      {
-        url: "/assets/news-and-features/hero-banner.avif",
-        width: 1920,
-        height: 1080,
-        alt: "News and Features - McD BERL",
-      },
-    ],
-    type: "website",
-  },
-};
+  description: "The latest McD BERL news: industry recognition, conclaves, lectures and media features on sustainable construction and climate-positive buildings.",
+  path: "/news-and-features/",
+  image: ogImage("news"),
+  imageAlt: "McD BERL news and features",
+});
 
 export default function NewsFeaturesPage() {
   return (
@@ -34,6 +21,7 @@ export default function NewsFeaturesPage() {
       <main>
         <NewsFeaturesClient />
       </main>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "News and Features", path: "/news-and-features/" }])} />
       <SiteFooter />
     </>
   );

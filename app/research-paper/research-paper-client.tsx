@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useMemo } from "react";
+import { useDialog } from "../../lib/use-dialog";
 import {
   RESEARCH_PAPERS,
   RESEARCH_CATEGORIES,
@@ -13,6 +14,7 @@ export default function ResearchPaperClient() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [activeModalPaper, setActiveModalPaper] = useState<ResearchPaperItem | null>(null);
+  const dialogRef = useDialog<HTMLDivElement>(activeModalPaper !== null, () => setActiveModalPaper(null));
 
   const filteredPapers = useMemo(() => {
     return RESEARCH_PAPERS.filter((paper) => {
@@ -73,6 +75,7 @@ export default function ResearchPaperClient() {
                   type="button"
                   onClick={() => setSelectedCategory(cat)}
                   className={`research-tab-btn ${isActive ? "is-active" : ""}`}
+                  aria-pressed={isActive}
                 >
                   <span>{cat}</span>
                   <span className="research-tab-count">{count}</span>
@@ -235,6 +238,8 @@ export default function ResearchPaperClient() {
           aria-labelledby="modal-paper-title"
         >
           <div
+            ref={dialogRef}
+            tabIndex={-1}
             className="research-modal-window"
             onClick={(e) => e.stopPropagation()}
           >

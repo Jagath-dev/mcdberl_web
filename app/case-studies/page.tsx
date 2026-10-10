@@ -1,29 +1,18 @@
 import type { Metadata } from "next";
 import { SiteHeader, SiteFooter } from "../../components/site-chrome";
 import CaseStudiesClient from "./case-studies-client";
+import { JsonLd } from "../../components/json-ld";
+import { breadcrumbJsonLd } from "../../lib/site";
+import { pageMetadata } from "../../lib/seo";
+import { ogImage } from "../../lib/og-images";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/case-studies/" },
+export const metadata: Metadata = pageMetadata({
   title: "Case Studies | McD BERL Pvt Ltd",
-  description:
-    "Explore case studies on Net Zero Design, High Performance Buildings, and Cooling Cities by McD BERL. Proven engineering for academic campuses and enterprise facilities.",
-  openGraph: {
-    title: "Case Studies | McD BERL Pvt Ltd",
-    description:
-      "Explore case studies on Net Zero Design, High Performance Buildings, and Cooling Cities by McD BERL. Proven engineering for academic campuses and enterprise facilities.",
-    url: "https://mcdberl.com/case-studies/",
-    siteName: "McD BERL Pvt Ltd",
-    images: [
-      {
-        url: "/assets/case-studies/case-studies-hero.jpg",
-        width: 1920,
-        height: 1080,
-        alt: "Case Studies - McD BERL"
-      }
-    ],
-    type: "website"
-  }
-};
+  description: "Case studies on net zero design, high-performance buildings and cooling cities by McD BERL, with proven engineering for campuses and enterprise facilities.",
+  path: "/case-studies/",
+  image: ogImage("case-studies"),
+  imageAlt: "McD BERL case studies",
+});
 
 export default function CaseStudiesPage() {
   return (
@@ -32,6 +21,7 @@ export default function CaseStudiesPage() {
       <main>
         <CaseStudiesClient />
       </main>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies/" }])} />
       <SiteFooter />
     </>
   );

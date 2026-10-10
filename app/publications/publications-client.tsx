@@ -71,6 +71,7 @@ function PublicationsView({ posts, typeParam }: { posts: PublicationCard[]; type
             <button
               type="button"
               className={`pub-filter-pill ${activeType === "All" ? "is-active" : ""}`}
+              aria-pressed={activeType === "All"}
               onClick={() => {
                 setActiveType("All");
                 setDisplayCount(12);
@@ -81,6 +82,7 @@ function PublicationsView({ posts, typeParam }: { posts: PublicationCard[]; type
             <button
               type="button"
               className={`pub-filter-pill ${activeType === "Blog" ? "is-active" : ""}`}
+              aria-pressed={activeType === "Blog"}
               onClick={() => {
                 setActiveType("Blog");
                 setDisplayCount(12);
@@ -91,6 +93,7 @@ function PublicationsView({ posts, typeParam }: { posts: PublicationCard[]; type
             <button
               type="button"
               className={`pub-filter-pill ${activeType === "Article" ? "is-active" : ""}`}
+              aria-pressed={activeType === "Article"}
               onClick={() => {
                 setActiveType("Article");
                 setDisplayCount(12);
@@ -116,6 +119,7 @@ function PublicationsView({ posts, typeParam }: { posts: PublicationCard[]; type
 
         {/* Publications Grid */}
         <section className="publications-grid-section page-shell">
+          <h2 className="sr-only">All articles and blogs</h2>
           {filteredPosts.length === 0 ? (
             <div className="publications-empty-state">
               <p>No publications found matching &ldquo;{searchQuery}&rdquo;.</p>

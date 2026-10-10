@@ -3,7 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter, SiteHeader } from "../../../components/site-chrome";
 import { sectorProjects } from "../../../lib/projects-data";
-import { breadcrumbJsonLd, jsonLd } from "../../../lib/site";
+import { SITE_URL, breadcrumbJsonLd, jsonLd } from "../../../lib/site";
+import { clampDescription, pageMetadata } from "../../../lib/seo";
+import { projectOgImage } from "../../../lib/og-images";
 
 export const dynamicParams = false;
 
@@ -17,17 +19,13 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const project = sectorProjects.find((p) => p.slug === slug);
   if (!project) return {};
-  return {
-    title: `${project.title} | McD BERL`,
+  return pageMetadata({
+    title: project.title.length + project.location.length > 48 ? `${project.title} | McD BERL Projects` : `${project.title}, ${project.location} | McD BERL Projects`,
     description: project.summary,
-    alternates: { canonical: `/projects/${project.slug}/` },
-    openGraph: {
-      title: `${project.title} | McD BERL`,
-      description: project.summary,
-      url: `/projects/${project.slug}/`,
-      images: [{ url: project.image, alt: project.title }],
-    },
-  };
+    path: `/projects/${project.slug}/`,
+    image: projectOgImage(project.slug),
+    imageAlt: project.title,
+  });
 }
 
 export default async function ProjectPage({ params }: Props) {
@@ -91,13 +89,24 @@ export default async function ProjectPage({ params }: Props) {
       </main>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={jsonLd(
+        dangerouslySetInnerHTML={jsonLd([
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
             { name: "Projects", path: "/projects/" },
             { name: project.title, path: `/projects/${project.slug}/` },
-          ])
-        )}
+          ]),
+          {
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            name: project.title,
+            description: clampDescription(project.summary, 300),
+            url: `${SITE_URL}/projects/${project.slug}/`,
+            image: `${SITE_URL}${project.image}`,
+            locationCreated: { "@type": "Place", name: project.location },
+            keywords: project.focus.join(", "),
+            creator: { "@id": `${SITE_URL}/#organization` },
+          },
+        ])}
       />
       <SiteFooter />
     </>

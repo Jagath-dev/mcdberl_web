@@ -85,13 +85,13 @@ export default function ContactClient() {
                 <span className="card-arrow">↗</span>
               </a>
 
-              <a href="tel:9606456689" className="contact-card-link" aria-label="Call Business Enquiry at 9606456689">
+              <a href="tel:+919606456689" className="contact-card-link" aria-label="Call Business Enquiry at +91 96064 56689">
                 <span className="card-badge">Business Enquiry</span>
                 <strong>+91 96064 56689</strong>
                 <span className="card-arrow">↗</span>
               </a>
 
-              <a href="tel:8105833031" className="contact-card-link" aria-label="Call Other Enquiry at 8105833031">
+              <a href="tel:+918105833031" className="contact-card-link" aria-label="Call Other Enquiry at +91 81058 33031">
                 <span className="card-badge">Other Enquiry</span>
                 <strong>+91 81058 33031</strong>
                 <span className="card-arrow">↗</span>
@@ -135,7 +135,7 @@ export default function ContactClient() {
                   Andheri West, Mumbai 400058
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/ubx2v4xZCBQgJhgP9"
+                  href="https://www.google.com/maps/search/?api=1&query=Modi+House+Dalia+Industrial+Estate+Veera+Desai+Road+Andheri+West+Mumbai+400058"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="office-map-link"

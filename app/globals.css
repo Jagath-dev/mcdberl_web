@@ -378,7 +378,7 @@
   margin: 0;
 }
 
-.about-vm-card.values-card h3 {
+.about-vm-card.values-card h2 {
   font-family: Georgia, serif;
   font-size: 32px;
   font-weight: 400;
@@ -668,7 +668,7 @@
   border-radius: 10px;
 }
 
-.footprint-project-card h4 {
+.footprint-project-card h3 {
   font-family: Georgia, serif;
   font-size: 17px;
   font-weight: 400;
@@ -4484,3 +4484,14 @@
 .partner-logo-img{width:150px;height:60px;max-width:none;max-height:none;filter:none}
 .partner-card:hover .partner-logo-img,.partner-card:focus-visible .partner-logo-img{filter:none;transform:scale(1.05)}
 @media(max-width:900px){.partner-logo-box{height:52px}.partner-logo-img{width:125px;height:50px}}
+
+/* Accessibility: text contrast fixes (WCAG AA 4.5:1 for small text) */
+.projects-results-count,.project-card-location,.projects-sector-index-count,.projects-grid-head>span{color:#66635c}
+.career-form-guarantee>span,.home-contact-locations>span{color:#66635c}
+.casestudy-highlights-label,.findings-label,.media-author-label,.research-meta-item,.pub-card-date,.partner-category-badge{color:#66635c}
+.testimonials .eyebrow,.about-approach-v2 .eyebrow,.sector-approach .eyebrow,.sector-approach-list article>span,.values-band .eyebrow,.value-grid>div>span{color:#ad3329}
+.footprint-country-tag{color:#ad3329}
+.pub-card-badge.badge-blog{background:#c83d32}
+.media-subscribe-btn{background:#cc0000}
+.news-tab-count{color:#fff;opacity:1}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

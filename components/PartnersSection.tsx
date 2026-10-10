@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useDialog } from "../lib/use-dialog";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -169,17 +170,11 @@ export default function PartnersSection() {
     ? PARTNERS
     : PARTNERS.filter((p) => p.category === activeCategory);
 
-  // Close modal on Escape
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setSelectedPartner(null);
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
+  // Focus, Tab, Escape and scroll handling for the partner pop-up
+  const dialogRef = useDialog<HTMLDivElement>(selectedPartner !== null, () => setSelectedPartner(null));
 
   return (
-    <section id="publications" className="partners section-shell" aria-label="Our Partners">
+    <section id="partners" className="partners section-shell" aria-label="Our Partners">
       {/* Header with Title and Mode Controls */}
       <div className="partners-header">
         <div>
@@ -238,6 +233,7 @@ export default function PartnersSection() {
                   key={cat}
                   type="button"
                   className={isSelected ? "filter-pill is-active" : "filter-pill"}
+                  aria-pressed={isSelected}
                   onClick={() => setActiveCategory(cat)}
                 >
                   <span>{cat}</span>
@@ -390,6 +386,8 @@ export default function PartnersSection() {
             aria-labelledby="modal-partner-title"
           >
             <motion.div
+              ref={dialogRef}
+              tabIndex={-1}
               className="partner-modal-content"
               onClick={(e) => e.stopPropagation()}
               initial={{ opacity: 0, scale: 0.92, y: 20 }}

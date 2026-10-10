@@ -1,29 +1,18 @@
 import type { Metadata } from "next";
 import { SiteHeader, SiteFooter } from "../../components/site-chrome";
 import ResearchPaperClient from "./research-paper-client";
+import { JsonLd } from "../../components/json-ld";
+import { breadcrumbJsonLd } from "../../lib/site";
+import { pageMetadata } from "../../lib/seo";
+import { ogImage } from "../../lib/og-images";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/research-paper/" },
-  title: "Our Research Works | McD BERL Pvt Ltd",
-  description:
-    "Explore in-depth research on CO₂ emissions, the One Watt Building Challenge, and wet bulb temperature impacts, offering valuable insights into sustainability and environmental considerations in construction.",
-  openGraph: {
-    title: "Our Research Works | McD BERL Pvt Ltd",
-    description:
-      "Explore in-depth research on CO₂ emissions, the One Watt Building Challenge, and wet bulb temperature impacts by McD BERL Research Laboratory.",
-    url: "https://mcdberl.com/research-paper/",
-    siteName: "McD BERL Pvt Ltd",
-    images: [
-      {
-        url: "/assets/research-paper/research-banner.jpg",
-        width: 1920,
-        height: 1080,
-        alt: "Research Papers - McD BERL"
-      }
-    ],
-    type: "website"
-  }
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Research Papers | McD BERL Pvt Ltd",
+  description: "McD BERL research on building-sector CO₂ emissions, the One Watt Building Challenge, wet bulb temperature and urban water resilience.",
+  path: "/research-paper/",
+  image: ogImage("research"),
+  imageAlt: "McD BERL research papers",
+});
 
 export default function ResearchPaperPage() {
   return (
@@ -32,6 +21,7 @@ export default function ResearchPaperPage() {
       <main>
         <ResearchPaperClient />
       </main>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Research Papers", path: "/research-paper/" }])} />
       <SiteFooter />
     </>
   );

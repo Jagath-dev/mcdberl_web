@@ -110,8 +110,8 @@ export default function HomeClient() {
             </p>
             <div className="home-contact-links">
               <a href="mailto:info@mcdberl.com" className="text-link">info@mcdberl.com <span>↗</span></a>
-              <a href="tel:9606456689" className="text-link">+91 96064 56689 <span>↗</span></a>
-              <a href="tel:8105833031" className="text-link">+91 81058 33031 <span>↗</span></a>
+              <a href="tel:+919606456689" className="text-link">+91 96064 56689 <span>↗</span></a>
+              <a href="tel:+918105833031" className="text-link">+91 81058 33031 <span>↗</span></a>
             </div>
           </div>
           <div className="home-contact-card">

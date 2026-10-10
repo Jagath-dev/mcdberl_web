@@ -1,29 +1,18 @@
 import type { Metadata } from "next";
 import { SiteHeader, SiteFooter } from "../../components/site-chrome";
 import MediaClient from "./media-client";
+import { JsonLd } from "../../components/json-ld";
+import { breadcrumbJsonLd } from "../../lib/site";
+import { pageMetadata } from "../../lib/seo";
+import { ogImage } from "../../lib/og-images";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/media/" },
+export const metadata: Metadata = pageMetadata({
   title: "Media | McD BERL Pvt Ltd",
-  description:
-    "Explore our curated video library featuring insights on sustainable building design, MEP systems, and energy efficiency, delivering innovative solutions through visual content.",
-  openGraph: {
-    title: "Media | McD BERL Pvt Ltd",
-    description:
-      "Curated video library and documentaries featuring insights on sustainable building design, MEP systems, and energy efficiency by McD BERL.",
-    url: "https://mcdberl.com/media/",
-    siteName: "McD BERL Pvt Ltd",
-    images: [
-      {
-        url: "/assets/media/media-hero.jpg",
-        width: 1920,
-        height: 1080,
-        alt: "Media - McD BERL"
-      }
-    ],
-    type: "website"
-  }
-};
+  description: "Watch McD BERL’s video library on sustainable building design, MEP systems, passive cooling, water and energy efficiency.",
+  path: "/media/",
+  image: ogImage("media"),
+  imageAlt: "McD BERL media and videos",
+});
 
 export default function MediaPage() {
   return (
@@ -32,6 +21,7 @@ export default function MediaPage() {
       <main>
         <MediaClient />
       </main>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Media", path: "/media/" }])} />
       <SiteFooter />
     </>
   );

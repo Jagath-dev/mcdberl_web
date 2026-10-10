@@ -20,13 +20,47 @@ export const SOCIAL_LINKS = [
 export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
   name: SITE_NAME,
-  alternateName: "McD Built Environment Research Laboratory",
-  url: SITE_URL,
+  alternateName: ["McD BERL", "McD Built Environment Research Laboratory"],
+  url: `${SITE_URL}/`,
   logo: `${SITE_URL}/assets/branding/mcd-logo.png`,
-  description: "Sustainable building engineering and regenerative built environments.",
+  description:
+    "MEP, green building and sustainability consultants engineering energy-efficient, net zero and net positive buildings across India and worldwide.",
   email: "info@mcdberl.com",
+  address: [
+    {
+      "@type": "PostalAddress",
+      streetAddress: "Subramanya Arcade Tower-B, Bannerghatta Rd, Old Gurappanapalya, 1st Stage, BTM Layout",
+      addressLocality: "Bengaluru",
+      addressRegion: "Karnataka",
+      postalCode: "560029",
+      addressCountry: "IN",
+    },
+    {
+      "@type": "PostalAddress",
+      streetAddress: "1st Floor, Modi House, C-10, Dalia Industrial Estate, Veera Desai Road, Andheri West",
+      addressLocality: "Mumbai",
+      addressRegion: "Maharashtra",
+      postalCode: "400058",
+      addressCountry: "IN",
+    },
+  ],
+  contactPoint: [
+    { "@type": "ContactPoint", contactType: "sales", telephone: "+91-96064-56689", email: "info@mcdberl.com", areaServed: "Worldwide", availableLanguage: ["en"] },
+    { "@type": "ContactPoint", contactType: "customer service", telephone: "+91-81058-33031", availableLanguage: ["en"] },
+  ],
   sameAs: SOCIAL_LINKS,
+};
+
+export const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  name: "McD BERL",
+  url: `${SITE_URL}/`,
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  inLanguage: "en-IN",
 };
 
 export function breadcrumbJsonLd(items: { name: string; path: string }[]) {

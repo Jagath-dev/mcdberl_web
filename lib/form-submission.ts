@@ -56,7 +56,7 @@ export async function handleFormSubmission(
 
   if (!supabaseUrl || !supabaseKey) {
     console.error(`Form submission to ${table} failed: Supabase is not configured.`);
-    return NextResponse.json({ error: "We couldn't send your message right now." }, { status: 503 });
+    return NextResponse.json({ error: "We couldn't send your message right now. Please try again or email info@mcdberl.com." }, { status: 503 });
   }
 
   try {
@@ -73,11 +73,11 @@ export async function handleFormSubmission(
 
     if (!response.ok) {
       console.error(`Supabase insert into ${table} failed:`, response.status, await response.text());
-      return NextResponse.json({ error: "We couldn't send your message right now." }, { status: 502 });
+      return NextResponse.json({ error: "We couldn't send your message right now. Please try again or email info@mcdberl.com." }, { status: 502 });
     }
   } catch (err) {
     console.error(`Supabase insert into ${table} failed:`, err);
-    return NextResponse.json({ error: "We couldn't send your message right now." }, { status: 502 });
+    return NextResponse.json({ error: "We couldn't send your message right now. Please try again or email info@mcdberl.com." }, { status: 502 });
   }
 
   return NextResponse.json({ success: true, message: successMessage });

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useDialog } from "../../lib/use-dialog";
 import Image from "next/image";
 import Link from "next/link";
 import { NEWS_FEATURES_DATA, NewsItem } from "../../lib/news-features-data";
@@ -17,6 +18,7 @@ export default function NewsFeaturesClient() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [activeModalItem, setActiveModalItem] = useState<NewsItem | null>(null);
+  const dialogRef = useDialog<HTMLDivElement>(activeModalItem !== null, () => setActiveModalItem(null));
 
   const filteredItems = useMemo(() => {
     return NEWS_FEATURES_DATA.filter((item) => {
@@ -256,6 +258,8 @@ export default function NewsFeaturesClient() {
           aria-labelledby="modal-title"
         >
           <div
+            ref={dialogRef}
+            tabIndex={-1}
             className="news-modal-card"
             onClick={(e) => e.stopPropagation()}
           >
