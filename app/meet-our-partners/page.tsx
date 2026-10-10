@@ -3,6 +3,7 @@ import { SiteHeader, SiteFooter } from "../../components/site-chrome";
 import MeetOurPartnersClient from "./partners-client";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/meet-our-partners/" },
   title: "Meet Our Partners | McD BERL Pvt Ltd",
   description:
     "Meet our valued partners across tech, commercial real estate, institutions, and architecture. McD BERL collaborates with leading organizations to engineer sustainable built environments.",

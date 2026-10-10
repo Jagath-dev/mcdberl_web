@@ -351,7 +351,7 @@ export default function AboutClient() {
           <div className="page-shell">
             <p className="eyebrow">Collaborate With Us</p>
             <h2>Ready to pioneer your next net-positive project?</h2>
-            <Link href="/contact" className="form-submit" style={{ textDecoration: "none", display: "inline-block" }}>
+            <Link href="/contact/" className="form-submit" style={{ textDecoration: "none", display: "inline-block" }}>
               Start the conversation <span>→</span>
             </Link>
           </div>

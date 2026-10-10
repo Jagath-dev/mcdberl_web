@@ -32,8 +32,6 @@ export type Sector = {
   stats?: SectorStat[];
 };
 
-const WP = "https://mcdberl.com/wp-content/uploads";
-
 export const sectors: Sector[] = [
   {
     slug: "advanced-manufacturing",
@@ -317,7 +315,7 @@ export const sectors: Sector[] = [
   {
     slug: "scientific-research-facilities",
     label: "Scientific Research Facilities",
-    bannerImage: `${WP}/2024/08/National-Center-for-Sustainable-Coastal-Management-Project-Featured-image.webp`,
+    bannerImage: `/assets/projects/wp/national-center-for-sustainable-coastal-management-project-featured-image.webp`,
     description:
       "Sustainable technologies for research facilities that optimise capital cost, support advanced operations and lower energy and water costs.",
     longDescription:
@@ -408,7 +406,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "Kaladham",
     location: "Vijayanagara, India",
-    image: `${WP}/2024/08/Kaladham-Project-Featured-image-1.webp`,
+    image: `/assets/projects/wp/kaladham-project-featured-image-1.webp`,
     slug: "kaladham",
     summary: "A cultural space for Indian art and heritage with solar power, optimised HVAC, rainwater harvesting, and natural ventilation and lighting.",
     sectors: ["arts-and-culture"],
@@ -428,7 +426,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "Venkatappa Art Gallery",
     location: "Bangalore, India",
-    image: `${WP}/2024/08/Venkatappa-Art-Gallery%E2%80%8B-Project-Featured-image.webp`,
+    image: `/assets/projects/wp/venkatappa-art-gallery-project-featured-image.webp`,
     slug: "venkatappa-art-gallery",
     summary: "A sustainability and energy-efficiency upgrade with new lighting and HVAC systems that preserves the gallery's cultural and architectural character.",
     sectors: ["arts-and-culture"],
@@ -460,7 +458,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "Policy Incentives for Chennai",
     location: "Chennai, India",
-    image: `${WP}/2024/08/Policy-Incentives-for-Chennai%E2%80%8B-Project-Featured-image-final.webp`,
+    image: `/assets/projects/wp/policy-incentives-for-chennai-project-featured-image-final.webp`,
     slug: "policy-incentives-chennai",
     summary: "Policy incentives that encourage energy efficiency, water conservation and green technology adoption in Chennai's urban development.",
     sectors: ["cities"],
@@ -492,7 +490,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "Infosys Bhubaneswar",
     location: "Bhubaneswar, India",
-    image: `${WP}/2024/07/Infosys-Bhubaneswar-Project-Featured-image.png`,
+    image: `/assets/projects/wp/infosys-bhubaneswar-project-featured-image.png`,
     slug: "infosys-bhubaneswar",
     summary: "A 4.5 lakh sq ft IGBC Platinum facility with shading devices, 80% daylit areas, an EPI of 74 kWh/m²/yr and an envelope load of 0.79 W/sq ft.",
     sectors: ["commercial-property"],
@@ -564,7 +562,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "IIM Trichy",
     location: "Tiruchirappalli, India",
-    image: `${WP}/2024/08/IIM-Trichy-Project-Featured-image-final.webp`,
+    image: `/assets/projects/wp/iim-trichy-project-featured-image-final.webp`,
     slug: "iim-trichy",
     summary: "A 75-acre, water self-sustainable, net-zero energy campus with centralised lighting, an 8-acre rainwater pond and district cooling — 42% energy savings, 48% water savings and a 54% cut in HVAC energy.",
     sectors: ["education", "energy", "water"],
@@ -574,7 +572,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "Maharashtra National Law University",
     location: "Nagpur, India",
-    image: `${WP}/2024/06/Paradigm_MNLU_1445_H_Hostel_v05_18-7-2017-scaled.jpg`,
+    image: `/assets/projects/wp/paradigm_mnlu_1445_h_hostel_v05_18-7-2017-scaled.jpg`,
     slug: "mnlu-nagpur",
     summary: "A 2 million sq ft campus with a strategic facade and underfloor air distribution — a 48% reduction in HVAC load and 45% lower electrical consumption, plus rainwater harvesting and on-site wastewater treatment.",
     sectors: ["education", "energy"],
@@ -604,7 +602,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "HAREDA",
     location: "Haryana, India",
-    image: `${WP}/2024/09/Hareda-Project-picture-9-scaled.webp`,
+    image: `/assets/projects/wp/hareda-project-picture-9-scaled.webp`,
     slug: "hareda",
     summary: "Policy and energy strategy for the Haryana Renewable Energy Development Agency to expand solar, wind and other renewables across the state and cut carbon emissions.",
     sectors: ["energy"],
@@ -626,7 +624,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "LV Prasad Eye Hospital",
     location: "Hyderabad, India",
-    image: `${WP}/2024/07/LV-Prasad-Hospital-Hyderabad-Project-Featured-image-final.webp`,
+    image: `/assets/projects/wp/lv-prasad-hospital-hyderabad-project-featured-image-final.webp`,
     slug: "lv-prasad-eye-hospital",
     summary: "A 1 lakh sq ft hospital with passive downdraft evaporative cooling that achieved a 65% reduction in air-conditioning power consumption.",
     sectors: ["healthcare"],
@@ -648,7 +646,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "Commercial Complex Durgapur",
     location: "Durgapur, India",
-    image: `${WP}/2024/07/Commercial-Complex-Durgapur-Project-Featured-image-final.webp`,
+    image: `/assets/projects/wp/commercial-complex-durgapur-project-featured-image-final.webp`,
     slug: "commercial-complex-durgapur",
     summary: "A 200,000 sq ft IGBC Platinum building with a daylight-focused facade, low-flow fixtures, rainwater harvesting, rooftop solar PV and a 38% cut in HVAC energy.",
     sectors: ["hotels-and-leisure"],
@@ -668,7 +666,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "Taj Kanha",
     location: "Kanha National Park, India",
-    image: `${WP}/2024/08/Taj-Kanha-Project-Featured-image-final.webp`,
+    image: `/assets/projects/wp/taj-kanha-project-featured-image-final.webp`,
     slug: "taj-kanha",
     summary: "A 24-room eco-resort on 24 acres whose passive evaporative cooling halved HVAC energy and cut per-room cooling from 12 TR to 5 TR. Winner of the Emmerson Cup Award.",
     sectors: ["hotels-and-leisure"],
@@ -722,7 +720,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "Kings House",
     location: "Bangalore, India",
-    image: `${WP}/2024/08/Kings-House-Project-Featured-image.webp`,
+    image: `/assets/projects/wp/kings-house-project-featured-image.webp`,
     slug: "kings-house",
     summary: "A 50,000 sq ft green building achieving 60% water savings and 35% energy savings through efficient fixtures, wastewater recycling, shading and solar systems.",
     sectors: ["residential-property"],
@@ -732,7 +730,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "Organo Development",
     location: "Near Hyderabad, India",
-    image: `${WP}/2024/07/Organo-Development-Project-Featured-image.webp`,
+    image: `/assets/projects/wp/organo-development-project-featured-image.webp`,
     slug: "organo-development",
     summary: "A sustainable residential community focused on ecological balance, with rainwater harvesting, solar power and organic farming.",
     sectors: ["residential-property"],
@@ -742,7 +740,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "Lodha Icon",
     location: "Mumbai, India",
-    image: `${WP}/2024/07/Lodha-Icon-Project-Featured-image.png`,
+    image: `/assets/projects/wp/lodha-icon-project-featured-image.png`,
     slug: "lodha-icon",
     summary: "A luxury residential development with energy-efficient HVAC and lighting, rainwater harvesting and water-saving fixtures.",
     sectors: ["residential-property"],
@@ -754,7 +752,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "Decathlon",
     location: "India",
-    image: `${WP}/2024/08/Decathlon%E2%80%8B-Project-Featured-image.webp`,
+    image: `/assets/projects/wp/decathlon-project-featured-image.webp`,
     slug: "decathlon",
     summary: "MEP services for a large retail space, with advanced HVAC, efficient lighting and water conservation to reduce environmental impact in a high-traffic setting.",
     sectors: ["retail"],
@@ -764,7 +762,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "Sahara Ganj Shopping Mall",
     location: "Lucknow, India",
-    image: `${WP}/2024/08/Sahara-Ganj-Shopping-Mall%E2%80%8B-Project-Featured-image-final.webp`,
+    image: `/assets/projects/wp/sahara-ganj-shopping-mall-project-featured-image-final.webp`,
     slug: "sahara-ganj-mall",
     summary: "MEP services focused on energy efficiency, with advanced HVAC, optimised lighting and water-saving measures to lower the mall's environmental footprint.",
     sectors: ["retail"],
@@ -774,7 +772,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "Fab India",
     location: "India",
-    image: `${WP}/2024/08/Fab-India%E2%80%8B-Project-Featured-image.webp`,
+    image: `/assets/projects/wp/fab-india-project-featured-image.webp`,
     slug: "fab-india",
     summary: "MEP services for retail spaces, with advanced HVAC, efficient lighting and water conservation for a comfortable, environmentally friendly shopping environment.",
     sectors: ["retail"],
@@ -786,7 +784,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "CMTI – Nano Manufacturing Technology Centre",
     location: "Bangalore, India",
-    image: `${WP}/2024/08/CMTI-NMTC-featured-image-final.webp`,
+    image: `/assets/projects/wp/cmti-nmtc-featured-image-final.webp`,
     slug: "cmti-nmtc",
     summary: "MEP services with energy-efficient HVAC, optimised electrical design and facility management systems for high-precision nano-manufacturing.",
     sectors: ["scientific-research-facilities"],
@@ -806,7 +804,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "National Centre for Sustainable Coastal Management",
     location: "Chennai, India",
-    image: `${WP}/2024/08/National-Center-for-Sustainable-Coastal-Management-Project-Featured-image.webp`,
+    image: `/assets/projects/wp/national-center-for-sustainable-coastal-management-project-featured-image.webp`,
     slug: "ncscm-chennai",
     summary: "A sustainable research facility with solar panels, optimised HVAC, rainwater harvesting, wastewater recycling, and natural ventilation and lighting.",
     sectors: ["scientific-research-facilities"],
@@ -818,7 +816,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "Sira Lake Development",
     location: "Karnataka, India",
-    image: `${WP}/2024/08/Sira-Lake-Development-Project-Featured-image-final-1.webp`,
+    image: `/assets/projects/wp/sira-lake-development-project-featured-image-final-1.webp`,
     slug: "sira-lake",
     summary: "Restoring the ecological health of Sira Lake through hydrological analysis, environmental impact assessment and sustainable design that improve water quality and biodiversity.",
     sectors: ["water"],

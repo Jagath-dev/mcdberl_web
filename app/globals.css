@@ -4453,3 +4453,18 @@
 }
 @media(prefers-reduced-motion:reduce){.ao-metric,.ap-card{transition:none}}
 .ap-steps::before{right:calc((100% - 80px) / 5 - 28px)}
+
+/* Spam honeypot: hidden from people, still in the DOM for bots */
+.form-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+/* 404 page */
+.not-found{min-height:60vh;padding-top:120px;padding-bottom:120px}
+.not-found h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(36px,4vw,56px);letter-spacing:-.04em;line-height:1.05;margin:0 0 18px}
+.not-found p{font-size:18px;line-height:1.6;max-width:560px;margin:0 0 28px}
+.not-found-links{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:16px 36px}

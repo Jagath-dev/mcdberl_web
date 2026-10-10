@@ -398,7 +398,7 @@ export default function PartnersSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <Link className="text-link partners-cta" href="/meet-our-partners">
+        <Link className="text-link partners-cta" href="/meet-our-partners/">
           Know more about our partners
           <motion.span
             className="arrow-motion"
@@ -468,7 +468,7 @@ export default function PartnersSection() {
 
               <div className="modal-footer">
                 <Link
-                  href="/meet-our-partners"
+                  href="/meet-our-partners/"
                   className="modal-action-btn"
                   onClick={() => setSelectedPartner(null)}
                 >

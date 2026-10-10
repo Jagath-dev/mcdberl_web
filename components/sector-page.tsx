@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter, SiteHeader } from "./site-chrome";
 import { getSector, getSectorProjects, sectors } from "../lib/projects-data";
+import { breadcrumbJsonLd, jsonLd } from "../lib/site";
 
 export function sectorMetadata(slug: string) {
   const sector = getSector(slug);
@@ -11,7 +12,7 @@ export function sectorMetadata(slug: string) {
     title: `${sector.label} | Sectors | McD BERL`,
     description: sector.description,
     alternates: { canonical: `/${sector.slug}/` },
-    openGraph: { title: `${sector.label} | McD BERL`, description: sector.description, images: [{ url: sector.bannerImage }] },
+    openGraph: { title: `${sector.label} | McD BERL`, description: sector.description, url: `/${sector.slug}/`, images: [{ url: sector.bannerImage, alt: sector.label }] },
   };
 }
 
@@ -179,6 +180,16 @@ export default function SectorPage({ slug }: { slug: string }) {
           </div>
         </section>
       </main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd(
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Sectors", path: "/projects/" },
+            { name: sector.label, path: `/${sector.slug}/` },
+          ])
+        )}
+      />
       <SiteFooter />
     </>
   );

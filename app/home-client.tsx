@@ -33,7 +33,7 @@ const testimonials = [
   ["Venkat Chalsani", "Samskruti Developers", "Over the last 12 years, McD BERL has consistently risen to the challenges we’ve presented, delivering innovative, feasible solutions—from smart water meters to demand-side smart grids."]
 ] as const;
 
-export default function Home() {
+export default function HomeClient() {
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const currentTestimonial = testimonials[testimonialIndex];
 
@@ -104,7 +104,7 @@ export default function Home() {
 
       <section className="testimonials section-shell"><div className="section-intro"><div><p className="eyebrow">Client voices</p><h2>Hear it straight<br />from our customers.</h2></div><div className="carousel-controls"><button aria-label="Previous testimonial" onClick={() => setTestimonialIndex((testimonialIndex - 1 + testimonials.length) % testimonials.length)}>←</button><span>{String(testimonialIndex + 1).padStart(2, "0")} / 07</span><button aria-label="Next testimonial" onClick={() => setTestimonialIndex((testimonialIndex + 1) % testimonials.length)}>→</button></div></div><blockquote>“{currentTestimonial[2]}”</blockquote><div className="quote-author"><strong>{currentTestimonial[0]}</strong><span>{currentTestimonial[1]}</span></div></section>
 
-      {/* <section id="careers" className="careers"><Image src={`${A}team/team-net-zero.jpg`} alt="McD BERL team working toward net-zero goals" fill sizes="100vw" /><div className="career-shade" /><div className="career-copy"><p>I've transformed challenges into the success of achieving net-zero goals.</p><a className="text-link light" href="/careers">Find your opportunity <span>→</span></a></div></section> */}
+      {/* <section id="careers" className="careers"><Image src={`${A}team/team-net-zero.jpg`} alt="McD BERL team working toward net-zero goals" fill sizes="100vw" /><div className="career-shade" /><div className="career-copy"><p>I've transformed challenges into the success of achieving net-zero goals.</p><a className="text-link light" href="/careers/">Find your opportunity <span>→</span></a></div></section> */}
 
       <PartnersSection />
 
@@ -125,7 +125,7 @@ export default function Home() {
           <div className="home-contact-card">
             <h3>Start a Conversation</h3>
             <p>Tell us about your project brief, scope, and sustainability targets.</p>
-            <a href="/contact" className="home-contact-btn">
+            <a href="/contact/" className="home-contact-btn">
               Open Contact Page & Offices <span>→</span>
             </a>
             <div className="home-contact-locations">
@@ -140,8 +140,6 @@ export default function Home() {
       </section>
 
       <SiteFooter />
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Organization", name: "McD BERL Pvt Ltd", url: "https://mcdberl.com", description: "Sustainable building engineering and regenerative built environments." }) }} />
     </main>
   );
 }

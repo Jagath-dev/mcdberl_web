@@ -3,6 +3,7 @@ import { SiteHeader, SiteFooter } from "../../components/site-chrome";
 import CaseStudiesClient from "./case-studies-client";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/case-studies/" },
   title: "Case Studies | McD BERL Pvt Ltd",
   description:
     "Explore case studies on Net Zero Design, High Performance Buildings, and Cooling Cities by McD BERL. Proven engineering for academic campuses and enterprise facilities.",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     title: "Case Studies | McD BERL Pvt Ltd",
     description:
       "Explore case studies on Net Zero Design, High Performance Buildings, and Cooling Cities by McD BERL. Proven engineering for academic campuses and enterprise facilities.",
-    url: "https://mcdberl.com/case-studiess/",
+    url: "https://mcdberl.com/case-studies/",
     siteName: "McD BERL Pvt Ltd",
     images: [
       {

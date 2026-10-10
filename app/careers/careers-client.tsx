@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { SiteFooter, SiteHeader } from "../../components/site-chrome";
 
-export default function CareersPage() {
+export default function CareersClient() {
   const [formState, setFormState] = useState<"idle" | "submitting" | "submitted" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState({
@@ -13,7 +13,8 @@ export default function CareersPage() {
     phone: "",
     track: "Graduate",
     portfolio_url: "",
-    cover_note: ""
+    cover_note: "",
+    website: ""
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -22,7 +23,7 @@ export default function CareersPage() {
     setErrorMessage("");
 
     try {
-      const res = await fetch("/api/careers", {
+      const res = await fetch("/api/careers/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
@@ -30,14 +31,15 @@ export default function CareersPage() {
 
       if (!res.ok) {
         const errorData = await res.json().catch(() => ({}));
-        throw new Error(errorData.error || "Failed to submit application. Please email us directly at careers@mcdberl.com.");
+        setErrorMessage(errorData.error || "Unable to send right now. Please try again or email us directly at careers@mcdberl.com.");
+        setFormState("error");
+        return;
       }
 
       setFormState("submitted");
-    } catch (err: any) {
-      console.error("Application submission error:", err);
-      // Fallback graceful success confirmation
-      setFormState("submitted");
+    } catch {
+      setErrorMessage("Unable to send right now. Please try again or email us directly at careers@mcdberl.com.");
+      setFormState("error");
     }
   };
 
@@ -119,7 +121,8 @@ export default function CareersPage() {
                         phone: "",
                         track: "Graduate",
                         portfolio_url: "",
-                        cover_note: ""
+                        cover_note: "",
+                        website: ""
                       });
                       setFormState("idle");
                     }}
@@ -139,6 +142,17 @@ export default function CareersPage() {
                       {errorMessage}
                     </div>
                   )}
+
+                  <input
+                    type="text"
+                    name="website"
+                    className="form-honeypot"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    value={formData.website}
+                    onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                  />
 
                   <div className="form-field-group">
                     <label htmlFor="name">Name *</label>

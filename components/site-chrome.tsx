@@ -11,11 +11,11 @@ const A = "/assets/";
 const sectorSubItems = sectorNav.map((s) => ({ label: s.label, href: `/${s.slug}/` }));
 
 const publicationSubItems = [
-  { label: "Articles and Blogs", href: "/publications" },
-  { label: "Case Studies", href: "/case-studiess" },
-  { label: "Media", href: "/media" },
-  { label: "Research Paper", href: "/research-paper" },
-  { label: "News and Features", href: "/news-and-features" },
+  { label: "Articles and Blogs", href: "/articles-and-blog/" },
+  { label: "Case Studies", href: "/case-studies/" },
+  { label: "Media", href: "/media/" },
+  { label: "Research Paper", href: "/research-paper/" },
+  { label: "News and Features", href: "/news-and-features/" },
 ];
 
 type NavItem = { label: string; href: string; children?: { label: string; href: string }[] };
@@ -28,13 +28,13 @@ export function SiteHeader() {
 
   const nav: NavItem[] = [
     { label: "Home", href: "/" },
-    { label: "Sectors", href: "/projects", children: sectorSubItems },
-    { label: "Services", href: "/services" },
-    { label: "Projects", href: "/projects" },
-    { label: "Publications", href: "/publications", children: publicationSubItems },
-    { label: "About", href: "/about" },
-    { label: "Careers", href: "/careers" },
-    { label: "Contact", href: "/contact" }
+    { label: "Sectors", href: "/projects/", children: sectorSubItems },
+    { label: "Services", href: "/services/" },
+    { label: "Projects", href: "/projects/" },
+    { label: "Publications", href: "/articles-and-blog/", children: publicationSubItems },
+    { label: "About", href: "/about/" },
+    { label: "Careers", href: "/careers/" },
+    { label: "Contact", href: "/contact/" }
   ];
 
   useEffect(() => {
@@ -48,24 +48,16 @@ export function SiteHeader() {
     setOpenDropdown(null);
   }, [pathname]);
 
-  const trimmed = pathname.replace(/\/$/, "") || "/";
-  const isSectorPage = sectorSubItems.some((s) => s.href.replace(/\/$/, "") === trimmed);
+  const trim = (path: string) => path.replace(/\/$/, "") || "/";
+  const trimmed = trim(pathname);
+  const isSectorPage = sectorSubItems.some((s) => trim(s.href) === trimmed);
 
   const isActive = (item: NavItem) => {
     if (item.label === "Sectors") return isSectorPage;
-    const [path, anchor] = item.href.split("#");
+    const [href, anchor] = item.href.split("#");
+    const path = trim(href);
     if (anchor) return trimmed === path && hash === `#${anchor}`;
-    if (path === "/publications") {
-      return (
-        trimmed === "/publications" ||
-        trimmed === "/articles-and-blog" ||
-        trimmed === "/case-studiess" ||
-        trimmed === "/case-studies" ||
-        trimmed === "/media" ||
-        trimmed === "/research-paper" ||
-        trimmed === "/news-and-features"
-      );
-    }
+    if (item.label === "Publications") return publicationSubItems.some((sub) => trim(sub.href) === trimmed);
     return trimmed === path || (path !== "/" && trimmed.startsWith(`${path}/`));
   };
 
@@ -119,21 +111,7 @@ export function SiteHeader() {
                 </div>
                 <div id={menuId} className={`nav-dropdown-menu ${isOpen ? "is-open" : ""}`}>
                   {item.children.map((sub) => {
-                    const subPath = sub.href.split("?")[0].replace(/\/$/, "");
-                    const isSubActive =
-                      item.label === "Sectors"
-                        ? subPath === trimmed
-                        : sub.label === "Articles and Blogs"
-                        ? trimmed === "/publications" || trimmed === "/articles-and-blog"
-                        : sub.label === "Case Studies"
-                        ? trimmed === "/case-studiess" || trimmed === "/case-studies"
-                        : sub.label === "Media"
-                        ? trimmed === "/media"
-                        : sub.label === "Research Paper"
-                        ? trimmed === "/research-paper"
-                        : sub.label === "News and Features"
-                        ? trimmed === "/news-and-features"
-                        : false;
+                    const isSubActive = trim(sub.href.split("?")[0]) === trimmed;
                     return (
                       <Link
                         key={sub.label}
@@ -186,9 +164,9 @@ export function SiteFooter() {
           <Image src={`${A}branding/mcd-logo.png`} alt="McD BERL" width={222} height={41} />
         </Link>
         <div className="footer-links">
-          <Link href="/careers">Careers</Link>
-          <Link href="/contact">Get in touch</Link>
-          <Link href="/publications">Blogs</Link>
+          <Link href="/careers/">Careers</Link>
+          <Link href="/contact/">Get in touch</Link>
+          <Link href="/articles-and-blog/">Blogs</Link>
         </div>
       </div>
       <div className="footer-bottom">

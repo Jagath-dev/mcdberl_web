@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter, SiteHeader } from "../../../components/site-chrome";
 import { sectorProjects } from "../../../lib/projects-data";
+import { breadcrumbJsonLd, jsonLd } from "../../../lib/site";
 
 export function generateStaticParams() {
   return sectorProjects.map(({ slug }) => ({ slug }));
@@ -14,6 +15,13 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   return {
     title: `${project.title} | McD BERL`,
     description: project.summary,
+    alternates: { canonical: `/projects/${project.slug}/` },
+    openGraph: {
+      title: `${project.title} | McD BERL`,
+      description: project.summary,
+      url: `/projects/${project.slug}/`,
+      images: [{ url: project.image, alt: project.title }],
+    },
   };
 }
 
@@ -75,6 +83,16 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </Link>
         </div>
       </main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd(
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Projects", path: "/projects/" },
+            { name: project.title, path: `/projects/${project.slug}/` },
+          ])
+        )}
+      />
       <SiteFooter />
     </>
   );

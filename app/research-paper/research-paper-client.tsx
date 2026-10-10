@@ -217,7 +217,7 @@ export default function ResearchPaperClient() {
               </p>
             </div>
             <div className="research-collab-actions">
-              <Link href="/contact" className="research-collab-btn">
+              <Link href="/contact/" className="research-collab-btn">
                 Collaborate On Research <span>↗</span>
               </Link>
             </div>
@@ -282,7 +282,7 @@ export default function ResearchPaperClient() {
 
             <div className="research-modal-footer">
               <Link
-                href="/contact"
+                href="/contact/"
                 className="modal-request-btn"
                 onClick={() => setActiveModalPaper(null)}
               >

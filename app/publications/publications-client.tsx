@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { SiteFooter, SiteHeader } from "../../components/site-chrome";
 import { PUBLICATIONS_DATA, PublicationItem } from "./publications-data";
+import { articleUrl } from "../../lib/site";
 
 export default function PublicationsClient() {
   const searchParams = useSearchParams();
@@ -134,7 +135,7 @@ export default function PublicationsClient() {
               {visiblePosts.map((post) => (
                 <article key={post.id} className="pub-card">
                   <a
-                    href={post.link}
+                    href={articleUrl(post.slug)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="pub-card-image-link"
@@ -160,14 +161,14 @@ export default function PublicationsClient() {
                       <span className="pub-card-date">{post.date}</span>
                     )}
                     <h3 className="pub-card-title">
-                      <a href={post.link} target="_blank" rel="noopener noreferrer">
+                      <a href={articleUrl(post.slug)} target="_blank" rel="noopener noreferrer">
                         {post.title}
                       </a>
                     </h3>
                     <p className="pub-card-excerpt">{post.excerpt}</p>
                     <div className="pub-card-footer">
                       <a
-                        href={post.link}
+                        href={articleUrl(post.slug)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="pub-card-read-more"
@@ -201,7 +202,7 @@ export default function PublicationsClient() {
             <p className="eyebrow">Have a Question?</p>
             <h2>Explore how our research translates to your building brief.</h2>
             <Link
-              href="/contact"
+              href="/contact/"
               className="form-submit"
               style={{ textDecoration: "none", display: "inline-block" }}
             >

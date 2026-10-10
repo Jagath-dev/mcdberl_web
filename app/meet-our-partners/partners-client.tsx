@@ -192,7 +192,7 @@ export default function MeetOurPartnersClient() {
               </p>
             </div>
             <div className="partners-cta-actions">
-              <Link href="/contact" className="partners-cta-btn">
+              <Link href="/contact/" className="partners-cta-btn">
                 Contact McD BERL <span>↗</span>
               </Link>
             </div>

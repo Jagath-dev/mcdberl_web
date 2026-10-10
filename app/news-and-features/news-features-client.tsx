@@ -235,7 +235,7 @@ export default function NewsFeaturesClient() {
             </p>
           </div>
           <div className="news-cta-action">
-            <Link href="/contact" className="news-cta-btn">
+            <Link href="/contact/" className="news-cta-btn">
               Get in Touch with Our Team
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
                 <line x1="5" y1="12" x2="19" y2="12" />

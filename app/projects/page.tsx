@@ -2,6 +2,7 @@ import { SiteFooter, SiteHeader } from "../../components/site-chrome";
 import ProjectsClient from "./projects-client";
 
 export const metadata = {
+  alternates: { canonical: "/projects/" },
   title: "Projects | McD BERL",
   description:
     "McD BERL showcases diverse projects across sectors like Advanced Manufacturing, Arts and Culture, Cities, and Commercial Property.",

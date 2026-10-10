@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "We advance sustainable construction with research on MEP design, smart buildings, and climate-positive innovations to reduce CO₂ emissions. Stay updated with McD BERL's latest industry recognitions, conclaves, lectures, and media features.",
   alternates: {
-    canonical: "https://mcdberl.com/news-and-features/",
+    canonical: "/news-and-features/",
   },
   openGraph: {
     title: "News and Features | McD BERL Pvt Ltd",

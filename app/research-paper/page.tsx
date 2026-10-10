@@ -3,6 +3,7 @@ import { SiteHeader, SiteFooter } from "../../components/site-chrome";
 import ResearchPaperClient from "./research-paper-client";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/research-paper/" },
   title: "Our Research Works | McD BERL Pvt Ltd",
   description:
     "Explore in-depth research on CO₂ emissions, the One Watt Building Challenge, and wet bulb temperature impacts, offering valuable insights into sustainability and environmental considerations in construction.",

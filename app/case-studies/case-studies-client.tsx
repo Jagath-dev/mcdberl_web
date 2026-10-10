@@ -306,7 +306,7 @@ export default function CaseStudiesClient() {
               Looking to design net-zero energy facilities, low-OPEX academic campuses, or resilient urban microclimates?
             </p>
           </div>
-          <Link href="/contact" className="casestudies-contact-btn">
+          <Link href="/contact/" className="casestudies-contact-btn">
             Connect With Our Engineers <span>↗</span>
           </Link>
         </section>

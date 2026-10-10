@@ -225,7 +225,7 @@ export default function MediaClient() {
               </p>
             </div>
             <div className="media-cta-actions">
-              <Link href="/contact" className="media-cta-btn">
+              <Link href="/contact/" className="media-cta-btn">
                 Contact Media Team <span>↗</span>
               </Link>
             </div>

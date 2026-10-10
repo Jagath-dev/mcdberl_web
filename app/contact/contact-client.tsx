@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { SiteFooter, SiteHeader } from "../../components/site-chrome";
 
-export default function ContactPage() {
+export default function ContactClient() {
   const [formState, setFormState] = useState<"idle" | "submitting" | "submitted" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState({
@@ -13,7 +13,8 @@ export default function ContactPage() {
     phone: "",
     company: "",
     designation: "",
-    message: ""
+    message: "",
+    website: ""
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -22,7 +23,7 @@ export default function ContactPage() {
     setErrorMessage("");
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("/api/contact/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
@@ -30,14 +31,15 @@ export default function ContactPage() {
 
       if (!res.ok) {
         const errorData = await res.json().catch(() => ({}));
-        throw new Error(errorData.error || "Unable to send your message. Please try again or email us directly.");
+        setErrorMessage(errorData.error || "Unable to send right now. Please try again or email us directly at info@mcdberl.com.");
+        setFormState("error");
+        return;
       }
 
       setFormState("submitted");
-    } catch (err: any) {
-      console.error("Submission failed:", err);
-      // Fallback: simulate graceful delivery if offline or API unavailable
-      setFormState("submitted");
+    } catch {
+      setErrorMessage("Unable to send right now. Please try again or email us directly at info@mcdberl.com.");
+      setFormState("error");
     }
   };
 
@@ -166,7 +168,7 @@ export default function ContactPage() {
                   type="button"
                   className="form-submit"
                   onClick={() => {
-                    setFormData({ name: "", email: "", phone: "", company: "", designation: "", message: "" });
+                    setFormData({ name: "", email: "", phone: "", company: "", designation: "", message: "", website: "" });
                     setFormState("idle");
                   }}
                 >
@@ -185,6 +187,17 @@ export default function ContactPage() {
                     {errorMessage}
                   </div>
                 )}
+
+                <input
+                  type="text"
+                  name="website"
+                  className="form-honeypot"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  value={formData.website}
+                  onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                />
 
                 <div className="form-field-group">
                   <label htmlFor="name">Name *</label>

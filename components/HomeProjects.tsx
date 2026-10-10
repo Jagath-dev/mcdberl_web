@@ -62,7 +62,7 @@ export default function HomeProjects() {
           <p className="eyebrow">Selected work</p>
           <h2>Built for what’s next.</h2>
         </div>
-        <Link className="text-link" href="/projects">
+        <Link className="text-link" href="/projects/">
           View all projects <span>↗</span>
         </Link>
       </div>
