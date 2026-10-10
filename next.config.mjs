@@ -22,6 +22,10 @@ const nextConfig = {
   trailingSlash: true,
   poweredByHeader: false,
   images: {
+    // AVIF is ~20% smaller than WebP; Next falls back to WebP for browsers without it.
+    formats: ["image/avif", "image/webp"],
+    // Keep optimized images cached for 30 days instead of re-encoding them every minute.
+    minimumCacheTTL: 60 * 60 * 24 * 30,
     remotePatterns: [
       {
         protocol: "https",
@@ -34,7 +38,14 @@ const nextConfig = {
     ],
   },
   async headers() {
-    return [{ source: "/:path*", headers: securityHeaders }];
+    return [
+      { source: "/:path*", headers: securityHeaders },
+      // Files in /public are not content-hashed, so cache for a day and refresh in the background after that.
+      {
+        source: "/assets/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
+      },
+    ];
   },
   async redirects() {
     const pageRedirects = [

@@ -19,7 +19,7 @@ export const PARTNERS: Partner[] = [
   {
     id: "google",
     name: "Google",
-    logo: "/assets/partners/google.png",
+    logo: "/assets/partners/cards/google.png",
     category: "Tech & Finance",
     sector: "Technology & High-Performance Campuses",
     highlight: "Engineering high-efficiency campus systems, smart cooling & net-positive carbon facilities.",
@@ -28,7 +28,7 @@ export const PARTNERS: Partner[] = [
   {
     id: "ifc",
     name: "IFC",
-    logo: "/assets/partners/ifc.png",
+    logo: "/assets/partners/cards/ifc.png",
     category: "Tech & Finance",
     sector: "World Bank Group / Sustainable Finance",
     highlight: "Collaborating on EDGE green building initiatives and national sustainable policy guidelines.",
@@ -37,7 +37,7 @@ export const PARTNERS: Partner[] = [
   {
     id: "infosys",
     name: "Infosys",
-    logo: "/assets/partners/infosys.png",
+    logo: "/assets/partners/cards/infosys.png",
     category: "Tech & Finance",
     sector: "Enterprise Technology & IT Campuses",
     highlight: "Long-standing collaboration on energy simulation, smart automation, and low-OPEX campus designs.",
@@ -46,7 +46,7 @@ export const PARTNERS: Partner[] = [
   {
     id: "wipro",
     name: "Wipro",
-    logo: "/assets/partners/wipro.png",
+    logo: "/assets/partners/cards/wipro.png",
     category: "Tech & Finance",
     sector: "Enterprise Tech & Sustainability",
     highlight: "Integrated MEP engineering for resilient corporate campuses and zero-discharge water loops.",
@@ -55,7 +55,7 @@ export const PARTNERS: Partner[] = [
   {
     id: "goldman-sachs",
     name: "Goldman Sachs",
-    logo: "/assets/partners/goldman-sachs.png",
+    logo: "/assets/partners/cards/goldman-sachs.png",
     category: "Tech & Finance",
     sector: "Global Financial Operations",
     highlight: "LEED Platinum engineering, advanced indoor environmental quality, and high-uptime resilience.",
@@ -64,7 +64,7 @@ export const PARTNERS: Partner[] = [
   {
     id: "k-raheja",
     name: "K Raheja",
-    logo: "/assets/partners/k-raheja.png",
+    logo: "/assets/partners/cards/k-raheja.png",
     category: "Real Estate & Living",
     sector: "Commercial Real Estate & IT Parks",
     highlight: "Engineering grade-A commercial complexes, district cooling and life-cycle energy reduction.",
@@ -73,7 +73,7 @@ export const PARTNERS: Partner[] = [
   {
     id: "aga-khan-group",
     name: "Aga Khan Group",
-    logo: "/assets/partners/aga-khan-group.png",
+    logo: "/assets/partners/cards/aga-khan-group.png",
     category: "Real Estate & Living",
     sector: "Institutional & Cultural Development",
     highlight: "Sustainable conservation engineering, cultural institutions, and community resilience.",
@@ -82,7 +82,7 @@ export const PARTNERS: Partner[] = [
   {
     id: "puravankara",
     name: "Puravankara",
-    logo: "/assets/partners/puravankara.png",
+    logo: "/assets/partners/cards/puravankara.png",
     category: "Real Estate & Living",
     sector: "Urban Residential Communities",
     highlight: "Smart residential townships, smart water metering, and decentralized resource systems.",
@@ -91,7 +91,7 @@ export const PARTNERS: Partner[] = [
   {
     id: "taj-hotels",
     name: "Taj Hotels",
-    logo: "/assets/partners/taj-hotels.png",
+    logo: "/assets/partners/cards/taj-hotels.png",
     category: "Real Estate & Living",
     sector: "Sustainable Luxury Hospitality",
     highlight: "Decarbonized guest comfort, high-efficiency thermal systems, and water conservation.",
@@ -100,7 +100,7 @@ export const PARTNERS: Partner[] = [
   {
     id: "lodha",
     name: "Lodha",
-    logo: "/assets/partners/lodha.png",
+    logo: "/assets/partners/cards/lodha.png",
     category: "Real Estate & Living",
     sector: "Premium Real Estate Development",
     highlight: "Net-zero carbon residential towers, passive solar optimization, and advanced MEP.",
@@ -109,7 +109,7 @@ export const PARTNERS: Partner[] = [
   {
     id: "cnt-architects",
     name: "CnT Architects",
-    logo: "/assets/partners/cnt-architects.png",
+    logo: "/assets/partners/cards/cnt-architects.png",
     category: "Architecture & Planning",
     sector: "Architectural Design Practice",
     highlight: "Seamless integration between architectural expression and building performance systems.",
@@ -118,7 +118,7 @@ export const PARTNERS: Partner[] = [
   {
     id: "biome",
     name: "Biome",
-    logo: "/assets/partners/biome.png",
+    logo: "/assets/partners/cards/biome.png",
     category: "Architecture & Planning",
     sector: "Ecological & Earth Architecture",
     highlight: "Bioclimatic design, earth construction, decentralized sanitation, and groundwater recharge.",
@@ -127,7 +127,7 @@ export const PARTNERS: Partner[] = [
   {
     id: "aparna",
     name: "Aparna",
-    logo: "/assets/partners/aparna.png",
+    logo: "/assets/partners/cards/aparna.png",
     category: "Real Estate & Living",
     sector: "Gated Communities & Mixed Use",
     highlight: "Large-scale residential infrastructure, integrated utilities, and energy performance.",
@@ -136,7 +136,7 @@ export const PARTNERS: Partner[] = [
   {
     id: "ajmera",
     name: "Ajmera",
-    logo: "/assets/partners/ajmera.png",
+    logo: "/assets/partners/cards/ajmera.png",
     category: "Real Estate & Living",
     sector: "Urban Real Estate Infrastructure",
     highlight: "Resource-efficient high-density residential towers and long-term durability.",
@@ -145,7 +145,7 @@ export const PARTNERS: Partner[] = [
   {
     id: "lt-realty",
     name: "L&T Realty",
-    logo: "/assets/partners/lt-realty.png",
+    logo: "/assets/partners/cards/lt-realty.png",
     category: "Real Estate & Living",
     sector: "Infrastructure & Mixed-Use Developments",
     highlight: "Transit-oriented developments, resilient urban MEP, and smart infrastructure engineering.",
@@ -183,33 +183,14 @@ export default function PartnersSection() {
       {/* Header with Title and Mode Controls */}
       <div className="partners-header">
         <div>
-          <motion.p
-            className="eyebrow"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            Trusted across disciplines
-          </motion.p>
-          <motion.h2
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
+          <p className="eyebrow partners-reveal">Trusted across disciplines</p>
+          <h2 className="partners-reveal">
             Together, we build<br />what matters.
-          </motion.h2>
+          </h2>
         </div>
 
         {/* View Mode Toggle */}
-        <motion.div
-          className="partners-view-toggle"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.2 }}
-        >
+        <div className="partners-view-toggle partners-reveal">
           <button
             type="button"
             className={viewMode === "grid" ? "toggle-btn is-active" : "toggle-btn"}
@@ -236,7 +217,7 @@ export default function PartnersSection() {
             </svg>
             <span>Flow Stream</span>
           </button>
-        </motion.div>
+        </div>
       </div>
 
       {/* Category Filter Pills (in Grid View) */}
@@ -310,8 +291,8 @@ export default function PartnersSection() {
                   <Image
                     src={partner.logo}
                     alt={`${partner.name} logo`}
-                    width={110}
-                    height={64}
+                    width={360}
+                    height={144}
                     className="partner-logo-img"
                   />
                 </div>
@@ -391,24 +372,12 @@ export default function PartnersSection() {
       )}
 
       {/* Footer Link / CTA */}
-      <motion.div
-        className="partners-footer"
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
+      <div className="partners-footer partners-reveal">
         <Link className="text-link partners-cta" href="/meet-our-partners/">
           Know more about our partners
-          <motion.span
-            className="arrow-motion"
-            animate={{ x: [0, 3, 0], y: [0, -3, 0] }}
-            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          >
-            ↗
-          </motion.span>
+          <span className="arrow-motion" aria-hidden="true">↗</span>
         </Link>
-      </motion.div>
+      </div>
 
       {/* Interactive Detail Modal on Click */}
       <AnimatePresence>

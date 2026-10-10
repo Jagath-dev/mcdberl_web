@@ -1,43 +1,34 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
+import HomeTestimonials from "../components/HomeTestimonials";
 import { SiteFooter, SiteHeader } from "../components/site-chrome";
 import PartnersSection from "../components/PartnersSection";
-import HomeProjects from "../components/HomeProjects";
+import HomeProjects, { type HomeProject } from "../components/HomeProjects";
+import { sectorProjects } from "../lib/projects-data";
 
 const A = "/assets/";
 
-const projects = [
-  ["Bharatiya City School", "Bangalore, India", "projects/bharatiya-school.webp", "bharatiya-school"],
-  ["Infosys Nagpur", "Nagpur, India", "projects/infosys-nagpur.webp", "infosys-nagpur"],
-  ["3 Times Square", "New York", "projects/3-times-square.webp", "3-times-square"],
-  ["Bharatiya City SEZ3", "Bangalore, India", "projects/bharatiya-city-sez3.webp", "bharatiya-city-sez3"],
-  ["Indian Pavilion Expo", "Shanghai, China", "projects/indian-pavilion-expo.webp", "indian-pavilion-expo-2010"],
-  ["Coachilin MDC", "California", "projects/coachilin-mdc.webp", "coachilin-mdc"],
-  ["Mandana Garments", "Tarapur / Boisar, Mumbai", "projects/mandana-garments.webp", "mandana-garments"],
-  ["Green Building Regulation Colombia", "Colombia", "projects/green-building-regulation-colombia.webp", "green-building-regulation-colombia"],
-  ["240 CPS Apartment", "New York", "projects/240-cps-apartment.webp", "240-cps-school"],
-  ["Transit Accommodation Block", "Bangalore, India", "projects/transit-accommodation-block.webp", "transit-accomodation-block-centre-for-human-genetics"],
-  ["Green Building Regulation Jakarta", "Jakarta", "projects/green-building-regulation-jakarta.webp", "green-building-regulation-jakarta"],
-  ["Umiya Velociti", "Bangalore, India", "projects/umiya-velociti.webp", "umiya-velociti"]
-] as const;
+// Homepage "Selected work" — the order here is the order shown.
+const FEATURED_SLUGS = [
+  "infosys-nagpur",
+  "bharatiya-school",
+  "3-times-square",
+  "bharatiya-city-sez3",
+  "indian-pavilion-expo-2010",
+  "coachilin-mdc",
+  "mandana-garments",
+  "green-building-regulation-colombia",
+  "240-cps-school",
+  "transit-accomodation-block-centre-for-human-genetics",
+  "green-building-regulation-jakarta",
+  "umiya-velociti",
+];
 
-const testimonials = [
-  ["Dr. B. Ramakrishna Rao", "Bharatiya City Developers", "McD BERL has been a trusted partner from the start, dedicating time, talent, and resources to our projects. They excel in re-engineering and value engineering, optimizing power consumption in our commercial buildings. Their work has led to significant reductions in both CAPEX and OPEX."],
-  ["Guruprakash Shastry", "Regional Head-Infrastructure, Infosys", "McD BERL’s dynamic team of young professionals constantly strives to reduce the environmental impact of buildings and campuses. Their skills in data analysis and energy simulations are impressive. It has been a rewarding experience collaborating with them on energy-saving ideas."],
-  ["Sanjay Prakash", "Shift Design", "McD BERL is a highly innovative MEP firm based in Bangalore, leading the way in integrating new technologies in building projects. Their expertise in renewable energy, solar generation, and high-performance HVAC is recognized globally."],
-  ["Akshay", "The Purple Ink Studio", "Our collaboration with McD BERL has been invaluable as they consistently understand our vision and push the limits of sustainability. They are detail-oriented and use advanced technology to ensure high-performance outcomes."],
-  ["Iype Chacko", "Flying Elephant Architects", "Working with McD BERL has been a true collaboration driven by a shared commitment to sustainable design and practices. Their contributions have enriched our projects from start to finish."],
-  ["Anupam Bansal", "ABRD Architects", "McD BERL’s system-based, holistic approach to engineering and sustainability sets them apart from conventional firms. Their unwavering commitment to sustainable design is evident in every project."],
-  ["Venkat Chalsani", "Samskruti Developers", "Over the last 12 years, McD BERL has consistently risen to the challenges we’ve presented, delivering innovative, feasible solutions—from smart water meters to demand-side smart grids."]
-] as const;
+const featured: HomeProject[] = FEATURED_SLUGS.flatMap((slug) => {
+  const p = sectorProjects.find((project) => project.slug === slug);
+  return p ? [{ title: p.title, location: p.location, image: p.image, slug: p.slug, summary: p.summary, category: p.category }] : [];
+});
 
 export default function HomeClient() {
-  const [testimonialIndex, setTestimonialIndex] = useState(0);
-  const currentTestimonial = testimonials[testimonialIndex];
-
-
   return (
     <main>
       <SiteHeader />
@@ -50,10 +41,11 @@ export default function HomeClient() {
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
           aria-hidden="true"
         >
-          <source src={`${A}hero/hero-video.mp4`} type="video/mp4" />
+          <source src={`${A}hero/hero-video-480.mp4`} type="video/mp4" media="(max-width: 900px)" />
+          <source src={`${A}hero/hero-video-720.mp4`} type="video/mp4" />
         </video>
         <div className="hero-shade" aria-hidden="true" />
         <div className="hero-copy">
@@ -86,7 +78,7 @@ export default function HomeClient() {
 
       <section id="sectors" className="statement section-shell"><p className="eyebrow">Our point of view</p><div className="statement-grid"><h2>Design, sustainability<br />and shared vision.</h2><p>Every project is a chance to leave the world better than we found it. From high-performance buildings to resilient campuses, our work brings together systems thinking, rigorous engineering and a deep respect for the places we shape.</p></div></section>
 
-      <HomeProjects />
+      <HomeProjects featured={featured} />
 
       <section id="services" className="services section-shell">
         <div className="services-heading">
@@ -96,15 +88,15 @@ export default function HomeClient() {
             <p>We connect technical precision with the larger life of a building, campus or city.</p>
           </div>
           <div className="services-image">
-            <Image src={`${A}services/engineering-systems.jpg`} alt="Abstract building services and engineering systems drawing" fill sizes="(max-width: 900px) 100vw, 48vw" />
+            <Image src={`${A}services/engineering-systems.webp`} alt="Abstract building services and engineering systems drawing" fill sizes="(max-width: 900px) 100vw, 48vw" />
           </div>
         </div>
         <div className="service-list"><div><span>01</span><h3>Performance-led design</h3><p>We bring energy, water and human comfort into the earliest design conversations.</p></div><div><span>02</span><h3>Systems that endure</h3><p>Practical engineering strategies built for long-term performance, resilience and value.</p></div><div><span>03</span><h3>Measured impact</h3><p>We turn ambitions into measurable outcomes, from first sketch to operational reality.</p></div></div>
       </section>
 
-      <section className="testimonials section-shell"><div className="section-intro"><div><p className="eyebrow">Client voices</p><h2>Hear it straight<br />from our customers.</h2></div><div className="carousel-controls"><button aria-label="Previous testimonial" onClick={() => setTestimonialIndex((testimonialIndex - 1 + testimonials.length) % testimonials.length)}>←</button><span>{String(testimonialIndex + 1).padStart(2, "0")} / 07</span><button aria-label="Next testimonial" onClick={() => setTestimonialIndex((testimonialIndex + 1) % testimonials.length)}>→</button></div></div><blockquote>“{currentTestimonial[2]}”</blockquote><div className="quote-author"><strong>{currentTestimonial[0]}</strong><span>{currentTestimonial[1]}</span></div></section>
+      <HomeTestimonials />
 
-      {/* <section id="careers" className="careers"><Image src={`${A}team/team-net-zero.jpg`} alt="McD BERL team working toward net-zero goals" fill sizes="100vw" /><div className="career-shade" /><div className="career-copy"><p>I've transformed challenges into the success of achieving net-zero goals.</p><a className="text-link light" href="/careers/">Find your opportunity <span>→</span></a></div></section> */}
+      {/* <section id="careers" className="careers"><Image src={`${A}team/team-net-zero.webp`} alt="McD BERL team working toward net-zero goals" fill sizes="100vw" /><div className="career-shade" /><div className="career-copy"><p>I've transformed challenges into the success of achieving net-zero goals.</p><a className="text-link light" href="/careers/">Find your opportunity <span>→</span></a></div></section> */}
 
       <PartnersSection />
 

@@ -1,30 +1,30 @@
 "use client";
 
-import React, { useState, useMemo, useEffect } from "react";
+import React, { Suspense, useState, useMemo, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { SiteFooter, SiteHeader } from "../../components/site-chrome";
-import { PUBLICATIONS_DATA, PublicationItem } from "./publications-data";
+import type { PublicationItem } from "./publications-data";
 import { articleUrl } from "../../lib/site";
 
-export default function PublicationsClient() {
-  const searchParams = useSearchParams();
-  const initialCategory = searchParams.get("category") || "All";
+// Only the fields the cards use, so the full dataset stays on the server.
+export type PublicationCard = Pick<PublicationItem, "id" | "slug" | "title" | "badge" | "date" | "excerpt" | "displayImage">;
+
+function PublicationsView({ posts, typeParam }: { posts: PublicationCard[]; typeParam: string | null }) {
 
   const [activeType, setActiveType] = useState<"All" | "Blog" | "Article">("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [displayCount, setDisplayCount] = useState(12);
 
   useEffect(() => {
-    const typeParam = searchParams.get("type");
     if (typeParam === "Blog" || typeParam === "Article") {
       setActiveType(typeParam);
     }
-  }, [searchParams]);
+  }, [typeParam]);
 
   const filteredPosts = useMemo(() => {
-    return PUBLICATIONS_DATA.filter((item) => {
+    return posts.filter((item) => {
       // Filter by type
       const matchType =
         activeType === "All" ||
@@ -40,7 +40,7 @@ export default function PublicationsClient() {
 
       return matchType && matchSearch;
     });
-  }, [activeType, searchQuery]);
+  }, [posts, activeType, searchQuery]);
 
   const visiblePosts = useMemo(() => {
     return filteredPosts.slice(0, displayCount);
@@ -76,7 +76,7 @@ export default function PublicationsClient() {
                 setDisplayCount(12);
               }}
             >
-              All Publications ({PUBLICATIONS_DATA.length})
+              All Publications ({posts.length})
             </button>
             <button
               type="button"
@@ -86,7 +86,7 @@ export default function PublicationsClient() {
                 setDisplayCount(12);
               }}
             >
-              Blogs ({PUBLICATIONS_DATA.filter((p) => p.badge.toLowerCase() === "blog").length})
+              Blogs ({posts.filter((p) => p.badge.toLowerCase() === "blog").length})
             </button>
             <button
               type="button"
@@ -96,7 +96,7 @@ export default function PublicationsClient() {
                 setDisplayCount(12);
               }}
             >
-              Articles ({PUBLICATIONS_DATA.filter((p) => p.badge.toLowerCase() === "article").length})
+              Articles ({posts.filter((p) => p.badge.toLowerCase() === "article").length})
             </button>
           </div>
 
@@ -213,5 +213,20 @@ export default function PublicationsClient() {
       </main>
       <SiteFooter />
     </>
+  );
+}
+
+function PublicationsWithParams({ posts }: { posts: PublicationCard[] }) {
+  const searchParams = useSearchParams();
+  return <PublicationsView posts={posts} typeParam={searchParams.get("type")} />;
+}
+
+// The fallback is the full list without URL filters, so the page is in the server HTML
+// instead of showing a loading message until JavaScript runs.
+export default function PublicationsClient({ posts }: { posts: PublicationCard[] }) {
+  return (
+    <Suspense fallback={<PublicationsView posts={posts} typeParam={null} />}>
+      <PublicationsWithParams posts={posts} />
+    </Suspense>
   );
 }

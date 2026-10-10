@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+// Static import gives the banner a tiny blurred preview that shows instantly while the full image loads.
+import careersHero from "../../public/assets/careers/pexels-mikhail-nilov-8297617.webp";
 import { SiteFooter, SiteHeader } from "../../components/site-chrome";
 
 export default function CareersClient() {
@@ -50,7 +52,8 @@ export default function CareersClient() {
         {/* Careers Hero */}
         <section className="career-page-hero">
           <Image
-            src="/assets/careers/pexels-mikhail-nilov-8297617.jpg"
+            src={careersHero}
+            placeholder="blur"
             alt="McD BERL engineering and talent team"
             fill
             priority

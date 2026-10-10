@@ -4,14 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useMemo, useRef, useState } from "react";
-import { sectors, sectorProjects } from "../../lib/projects-data";
+import type { Sector, SectorProject } from "../../lib/projects-data";
 
-const countFor = (slug: string) => sectorProjects.filter((p) => p.sectors.includes(slug)).length;
+// Only the fields this page uses, so the long sector copy stays on the server.
+export type ProjectsSector = Pick<Sector, "slug" | "label" | "description">;
+export type ProjectsCard = Pick<SectorProject, "title" | "location" | "image" | "slug" | "sectors" | "category">;
+type ProjectsProps = { sectors: ProjectsSector[]; sectorProjects: ProjectsCard[] };
 
-function ProjectsContent() {
-  const searchParams = useSearchParams();
+function ProjectsContent({ sectors, sectorProjects, paramSector }: ProjectsProps & { paramSector: string | null }) {
   const router = useRouter();
-  const paramSector = searchParams.get("sector");
   const validParam = paramSector && sectors.some((s) => s.slug === paramSector) ? paramSector : null;
   const [activeSector, setActiveSector] = useState<string | null>(validParam);
   const resultsRef = useRef<HTMLDivElement>(null);
@@ -32,7 +33,10 @@ function ProjectsContent() {
     }
   }, [activeSector]);
 
-  const counts = useMemo(() => Object.fromEntries(sectors.map((s) => [s.slug, countFor(s.slug)])), []);
+  const counts = useMemo(
+    () => Object.fromEntries(sectors.map((s) => [s.slug, sectorProjects.filter((p) => p.sectors.includes(s.slug)).length])),
+    [sectors, sectorProjects]
+  );
 
   const handleSectorChange = (slug: string | null) => {
     setActiveSector(slug);
@@ -61,7 +65,6 @@ function ProjectsContent() {
             alt="McD BERL Projects Landscape"
             fill
             priority
-            quality={95}
             sizes="100vw"
             className="projects-hero-img"
           />
@@ -211,10 +214,17 @@ function ProjectsContent() {
   );
 }
 
-export default function ProjectsClient() {
+function ProjectsWithParams(props: ProjectsProps) {
+  const searchParams = useSearchParams();
+  return <ProjectsContent {...props} paramSector={searchParams.get("sector")} />;
+}
+
+// The fallback is the full page without a sector filter, so it is in the server HTML
+// instead of showing a loading message until JavaScript runs.
+export default function ProjectsClient(props: ProjectsProps) {
   return (
-    <Suspense fallback={<div style={{ padding: "120px 28px" }}>Loading projects…</div>}>
-      <ProjectsContent />
+    <Suspense fallback={<ProjectsContent {...props} paramSector={null} />}>
+      <ProjectsWithParams {...props} />
     </Suspense>
   );
 }

@@ -4468,3 +4468,19 @@
 .not-found h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(36px,4vw,56px);letter-spacing:-.04em;line-height:1.05;margin:0 0 18px}
 .not-found p{font-size:18px;line-height:1.6;max-width:560px;margin:0 0 28px}
 .not-found-links{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:16px 36px}
+
+/* Partners section: plain-CSS entrance and arrow (replaces framer-motion, so the content is visible before JavaScript loads) */
+@keyframes partnersReveal{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes partnersArrow{0%,100%{transform:translate(0,0)}50%{transform:translate(3px,-3px)}}
+@supports (animation-timeline:view()){.partners-reveal{animation:partnersReveal linear both;animation-timeline:view();animation-range:entry 0% entry 70%}}
+.arrow-motion{animation:partnersArrow 2s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.partners-reveal,.arrow-motion{animation:none}}
+
+/* Dark base behind the careers/contact banners so there is no white flash before the image paints */
+.contact-page-hero,.career-page-hero{background:#1d2a2c}
+
+/* Partner logos: every mark is pre-sized on the same 360x144 transparent canvas, so one fixed box keeps them even and in full colour */
+.partner-logo-box{height:64px}
+.partner-logo-img{width:150px;height:60px;max-width:none;max-height:none;filter:none}
+.partner-card:hover .partner-logo-img,.partner-card:focus-visible .partner-logo-img{filter:none;transform:scale(1.05)}
+@media(max-width:900px){.partner-logo-box{height:52px}.partner-logo-img{width:125px;height:50px}}

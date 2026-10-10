@@ -46,7 +46,7 @@ export const RESEARCH_PAPERS: ResearchPaperItem[] = [
     slug: "sustainable-architecture-benchmarking-green-school-design",
     title: "Sustainable Architecture: Benchmarking Green School Design Through Material Performance Analysis",
     category: "Embodied Carbon & Materials",
-    image: "/assets/research-paper/green-school-benchmarking.jpg",
+    image: "/assets/research-paper/green-school-benchmarking.webp",
     readTime: "12 min read",
     publishedYear: "2024",
     href: "/publications/sustainable-architecture-benchmarking-green-school-design-through-material-performance-analysis",

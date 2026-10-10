@@ -77,7 +77,7 @@ export const CASE_STUDIES_DATA: CaseStudyItem[] = [
     description:
       "Reducing urban heat through vegetation, water management, reflective materials, and smart city planning for sustainable and livable environments.",
     mediaType: "image",
-    mediaSrc: "/assets/case-studies/cooling-cities-building-futures.jpg",
+    mediaSrc: "/assets/case-studies/cooling-cities-building-futures.webp",
     tag: "Urban Microclimate & Policy",
     keyHighlights: [
       "Mitigation of urban heat island (UHI) effects",

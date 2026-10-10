@@ -1,5 +1,16 @@
 import { SiteFooter, SiteHeader } from "../../components/site-chrome";
-import ProjectsClient from "./projects-client";
+import ProjectsClient, { type ProjectsCard, type ProjectsSector } from "./projects-client";
+import { sectorProjects, sectors } from "../../lib/projects-data";
+
+const sectorList: ProjectsSector[] = sectors.map(({ slug, label, description }) => ({ slug, label, description }));
+const projectCards: ProjectsCard[] = sectorProjects.map(({ title, location, image, slug, sectors, category }) => ({
+  title,
+  location,
+  image,
+  slug,
+  sectors,
+  category,
+}));
 
 export const metadata = {
   alternates: { canonical: "/projects/" },
@@ -13,7 +24,7 @@ export default function ProjectsPage() {
     <>
       <SiteHeader />
       <main className="projects-page">
-        <ProjectsClient />
+        <ProjectsClient sectors={sectorList} sectorProjects={projectCards} />
       </main>
       <SiteFooter />
     </>

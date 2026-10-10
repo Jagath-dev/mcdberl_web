@@ -50,7 +50,7 @@ export default function ContactClient() {
         {/* Contact Hero with Background Image */}
         <section className="contact-page-hero">
           <Image
-            src="/assets/contact/contact-hero.jpg"
+            src="/assets/contact/contact-hero.webp"
             alt="McD BERL contact and consultation"
             fill
             priority

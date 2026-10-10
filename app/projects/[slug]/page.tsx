@@ -5,12 +5,17 @@ import { SiteFooter, SiteHeader } from "../../../components/site-chrome";
 import { sectorProjects } from "../../../lib/projects-data";
 import { breadcrumbJsonLd, jsonLd } from "../../../lib/site";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return sectorProjects.map(({ slug }) => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const project = sectorProjects.find((p) => p.slug === params.slug);
+type Props = { params: Promise<{ slug: string }> };
+
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+  const project = sectorProjects.find((p) => p.slug === slug);
   if (!project) return {};
   return {
     title: `${project.title} | McD BERL`,
@@ -25,8 +30,9 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = sectorProjects.find((p) => p.slug === params.slug);
+export default async function ProjectPage({ params }: Props) {
+  const { slug } = await params;
+  const project = sectorProjects.find((p) => p.slug === slug);
   if (!project) notFound();
 
   return (

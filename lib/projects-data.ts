@@ -126,7 +126,7 @@ export const sectors: Sector[] = [
   {
     slug: "data-centres-and-technology",
     label: "Data Centres and Technology",
-    bannerImage: "/assets/services/engineering-systems.jpg",
+    bannerImage: "/assets/services/engineering-systems.webp",
     description:
       "We help data centres achieve much lower Power Usage Effectiveness through low-energy cooling and sustainable MEP design.",
     longDescription:
@@ -490,7 +490,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "Infosys Bhubaneswar",
     location: "Bhubaneswar, India",
-    image: `/assets/projects/wp/infosys-bhubaneswar-project-featured-image.png`,
+    image: `/assets/projects/wp/infosys-bhubaneswar-project-featured-image.webp`,
     slug: "infosys-bhubaneswar",
     summary: "A 4.5 lakh sq ft IGBC Platinum facility with shading devices, 80% daylit areas, an EPI of 74 kWh/m²/yr and an envelope load of 0.79 W/sq ft.",
     sectors: ["commercial-property"],
@@ -572,7 +572,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "Maharashtra National Law University",
     location: "Nagpur, India",
-    image: `/assets/projects/wp/paradigm_mnlu_1445_h_hostel_v05_18-7-2017-scaled.jpg`,
+    image: `/assets/projects/wp/paradigm_mnlu_1445_h_hostel_v05_18-7-2017-scaled.webp`,
     slug: "mnlu-nagpur",
     summary: "A 2 million sq ft campus with a strategic facade and underfloor air distribution — a 48% reduction in HVAC load and 45% lower electrical consumption, plus rainwater harvesting and on-site wastewater treatment.",
     sectors: ["education", "energy"],
@@ -634,7 +634,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "SS Hospital",
     location: "Davanagere, India",
-    image: "/assets/projects/cards/ss-hospital.png",
+    image: "/assets/projects/cards/ss-hospital.webp",
     slug: "ss-hospital-davanagere",
     summary: "A 1.2 lakh sq ft hospital with a 50% cut in HVAC energy use, plus rainwater harvesting and greywater recycling that reduced water demand by 40%.",
     sectors: ["healthcare"],
@@ -740,7 +740,7 @@ export const sectorProjects: SectorProject[] = [
   {
     title: "Lodha Icon",
     location: "Mumbai, India",
-    image: `/assets/projects/wp/lodha-icon-project-featured-image.png`,
+    image: `/assets/projects/wp/lodha-icon-project-featured-image.webp`,
     slug: "lodha-icon",
     summary: "A luxury residential development with energy-efficient HVAC and lighting, rainwater harvesting and water-saving fixtures.",
     sectors: ["residential-property"],

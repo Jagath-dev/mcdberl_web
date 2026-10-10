@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../../components/site-chrome";
-import { WORLD_COUNTRIES } from "./world-map-data";
+import type { MapCountry } from "./world-map-data";
 import { AboutApproach, AboutOutcomes } from "../../components/about-sections";
 
 interface ProjectLocation {
@@ -87,6 +87,30 @@ function projectCoords(lat: number, lng: number): [number, number] {
 export default function AboutClient() {
   const [selectedCountry, setSelectedCountry] = useState("All");
   const [hoveredProject, setHoveredProject] = useState<ProjectLocation | null>(null);
+  // The country outlines are ~125 KB, so load them only when the map is about to scroll into view.
+  const [worldCountries, setWorldCountries] = useState<MapCountry[]>([]);
+  const mapRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = mapRef.current;
+    if (!el) return;
+    const load = () => import("./world-map-data").then((m) => setWorldCountries(m.WORLD_COUNTRIES));
+    if (!("IntersectionObserver" in window)) {
+      load();
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          observer.disconnect();
+          load();
+        }
+      },
+      { rootMargin: "600px 0px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   const filteredProjects = useMemo(() => {
     if (selectedCountry === "All") return GLOBAL_PROJECTS;
@@ -195,7 +219,7 @@ export default function AboutClient() {
           </div>
 
           {/* Interactive World Map SVG */}
-          <div className="footprint-map-wrapper">
+          <div className="footprint-map-wrapper" ref={mapRef}>
             <svg
               className="footprint-map-svg"
               viewBox="0 0 1000 500"
@@ -222,7 +246,7 @@ export default function AboutClient() {
 
               {/* Realistic World Map Countries */}
               <g className="world-countries-group">
-                {WORLD_COUNTRIES.map((country, idx) => {
+                {worldCountries.map((country, idx) => {
                   const isSelected = selectedCountry === country.name;
                   const isCountryActive = country.isActive;
 

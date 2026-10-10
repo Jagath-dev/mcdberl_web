@@ -56,7 +56,7 @@ export default function CaseStudiesClient() {
       <section className="casestudies-hero">
         <div className="casestudies-hero-bg">
           <Image
-            src="/assets/case-studies/case-studies-hero.jpg"
+            src="/assets/case-studies/case-studies-hero.webp"
             alt="Case Studies Banner - McD BERL"
             fill
             priority

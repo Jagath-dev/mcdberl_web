@@ -3,36 +3,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { sectorProjects } from "../lib/projects-data";
+import type { SectorProject } from "../lib/projects-data";
 
-// Homepage "Selected work" — the order here is the order shown.
-const FEATURED_SLUGS = [
-  "infosys-nagpur",
-  "bharatiya-school",
-  "3-times-square",
-  "bharatiya-city-sez3",
-  "indian-pavilion-expo-2010",
-  "coachilin-mdc",
-  "mandana-garments",
-  "green-building-regulation-colombia",
-  "240-cps-school",
-  "transit-accomodation-block-centre-for-human-genetics",
-  "green-building-regulation-jakarta",
-  "umiya-velociti",
-];
+// Only the fields the carousel uses; the list is picked in app/home-client.tsx.
+export type HomeProject = Pick<SectorProject, "title" | "location" | "image" | "slug" | "summary" | "category">;
 
-const featured = FEATURED_SLUGS.map((slug) => sectorProjects.find((p) => p.slug === slug)).filter(
-  (p): p is (typeof sectorProjects)[number] => Boolean(p)
-);
-
-export default function HomeProjects() {
+export default function HomeProjects({ featured = [] }: { featured?: HomeProject[] }) {
   const [index, setIndex] = useState(0);
   const thumbsRef = useRef<HTMLDivElement>(null);
   const touchX = useRef<number | null>(null);
-  const total = featured.length;
-  const project = featured[index];
+  const total = featured?.length ?? 0;
+  const project = featured?.[index];
 
-  const go = (next: number) => setIndex((next + total) % total);
+  const go = (next: number) => {
+    if (total === 0) return;
+    setIndex((next + total) % total);
+  };
 
   // Keep the active thumbnail in view inside the strip (without scrolling the page)
   useEffect(() => {
@@ -84,17 +70,23 @@ export default function HomeProjects() {
               }
             }}
           >
-            {featured.map((p, i) => (
-              <Image
-                key={p.slug}
-                src={p.image}
-                alt={i === index ? p.title : ""}
-                fill
-                sizes="(max-width: 900px) 100vw, 62vw"
-                className={i === index ? "is-active" : undefined}
-                priority={i === 0}
-              />
-            ))}
+            {featured.map((p, i) => {
+              // Only mount the active slide and its neighbours so the crossfade works
+              // without downloading every full-size project image up front.
+              const distance = Math.min(Math.abs(i - index), total - Math.abs(i - index));
+              if (distance > 1) return null;
+              return (
+                <Image
+                  key={p.slug}
+                  src={p.image}
+                  alt={i === index ? p.title : ""}
+                  fill
+                  sizes="(max-width: 900px) 100vw, 62vw"
+                  className={i === index ? "is-active" : undefined}
+                  priority={i === 0}
+                />
+              );
+            })}
           </Link>
 
           <div className="home-work-progress" aria-hidden="true">
